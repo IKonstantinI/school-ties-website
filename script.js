@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartList.innerHTML = '';
         cartItems.forEach((item, index) => {
             const li = document.createElement('li');
+            li.classList.add('list-group-item');
             li.textContent = `${item.name} - ${item.price} руб.`;
             cartList.appendChild(li);
         });
@@ -15,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Добавление товара в корзину
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', event => {
-            const productItem = event.target.closest('.product-item');
+            const productItem = event.target.closest('.card');
             const productId = productItem.getAttribute('data-product-id');
-            const productName = productItem.getAttribute('data-product-name');
-            const productPrice = productItem.getAttribute('data-product-price');
+            const productName = productItem.querySelector('.card-title').textContent;
+            const productPrice = productItem.querySelector('.card-text').textContent.replace(' руб.', '');
             cartItems.push({ id: productId, name: productName, price: productPrice });
             updateCart();
         });
