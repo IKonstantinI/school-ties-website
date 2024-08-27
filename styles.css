@@ -144,4 +144,30 @@ section h2 {
 }
 
 #checkout-form input {
-    width: calc(50%
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#checkout-form .btn {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkout-form .btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Футер */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
