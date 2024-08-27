@@ -6,104 +6,27 @@
     <title>Галстуки Bertoldi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #343a40;
-            color: #fff;
-        }
-
-        .header .nav-link {
-            color: #fff;
-        }
-
-        .hero {
-            background: url('https://via.placeholder.com/1920x600?text=Bertoldi+Галстуки') no-repeat center center/cover;
-            height: 60vh;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-
-        .btn-danger {
-            background-color: #dc3545;
-            border-color: #dc3545;
-        }
-
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            text-align: center;
-        }
-
-        .card-body h5 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .card-body .card-text {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .card-body .row {
-            margin-bottom: 1rem;
-        }
-
-        .card-body .color-options img {
-            cursor: pointer;
-        }
-
-        .card-body .color-options img:hover {
-            opacity: 0.8;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        @media (max-width: 767px) {
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
     <!-- Шапка сайта -->
-    <header class="header py-3">
+    <header class="bg-dark text-white p-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <div class="fs-3">Bertoldi</div>
+            <div class="logo fs-3">Bertoldi</div>
             <nav>
                 <ul class="nav">
-                    <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
-                    <li class="nav-item"><a href="#collection" class="nav-link">Коллекция Bertoldi</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link text-white">О нас</a></li>
+                    <li class="nav-item"><a href="#collection" class="nav-link text-white">Коллекция Bertoldi</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link text-white">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Главный экран -->
-    <section id="hero" class="hero">
+    <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white" style="background: url('https://via.placeholder.com/1920x600?text=Bertoldi+Галстуки') no-repeat center center/cover; height: 60vh;">
         <div class="container">
             <h1>Идеальные галстуки для школьников и не только</h1>
             <a href="#collection" class="btn btn-danger btn-lg mt-3">Выбрать галстук</a>
@@ -112,9 +35,10 @@
 
     <!-- О нас -->
     <section id="about" class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">О нас</h2>
-            <p>Мы предлагаем качественные галстуки для школьной формы и не только. Вы можете заказать их мелким оптом или единичными экземплярами. Для единичных покупок посетите наш магазин на Wildberries по запросу "галстуки Bertoldi" или <a href="https://clck.ru/3Csh8F">перейдите по ссылке</a>.</p>
+        <div class="container">
+            <h2 class="text-center mb-4">О нас</h2>
+            <p class="text-center">Мы предлагаем качественные галстуки, которые идеально подойдут для школьной формы и не только. Здесь вы можете заказать галстуки Bertoldi (Бертольди) для детей вашего класса или школы мелким оптом по привлекательным ценам. Цена включает стоимость доставки до пункта СДЭК в вашем городе.</p>
+            <p class="text-center">Если вам нужно 1-2 единицы, их удобнее заказать в нашем магазине на Wildberries по поиску "галстуки Bertoldi" или перейдите по <a href="https://clck.ru/3Csh8F">ссылке</a>.</p>
         </div>
     </section>
 
@@ -123,80 +47,99 @@
         <div class="container">
             <h2 class="text-center mb-4">Коллекция Bertoldi</h2>
             <div class="row">
-                <!-- Карточка товара: Галстук-бантик мини -->
+                <!-- Карточка товара -->
                 <div class="col-md-4 mb-4">
-                    <div class="card text-center">
+                    <div class="card premium-card text-center">
                         <img src="https://via.placeholder.com/300x400?text=Галстук-бантик+мини" class="card-img-top" alt="Галстук-бантик мини">
                         <div class="card-body">
                             <h5 class="card-title">Галстук-бантик мини</h5>
-                            <p class="card-text">Размер 11 х 11 см.</p>
-                            <div class="row text-center">
-                                <div class="col">10 шт. - 390 руб.</div>
-                                <div class="col">20 шт. - 380 руб.</div>
-                                <div class="col">30 шт. - 375 руб.</div>
-                                <div class="col">100 шт. - 360 руб.</div>
-                            </div>
-                            <h6 class="mt-3">Цвета ткани:</h6>
-                            <div class="row justify-content-center color-options">
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Синий" alt="Синий" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Синий" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Красный" alt="Красный" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Красный" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Черный" alt="Черный" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Черный" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Зеленый" alt="Зеленый" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Зеленый" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Бордовый" alt="Бордовый" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Бордовый" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Клетка" alt="Клетка" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Клетка" class="img-fluid"></div>
-                            </div>
+                            <p class="card-text">Размер: 11 x 11 см</p>
+                            <p class="card-text price">
+                                <span>10 шт. - 390 руб.</span>
+                                <span>20 шт. - 380 руб.</span>
+                                <span>30 шт. - 375 руб.</span>
+                                <span>100 шт. - 360 руб.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Карточка товара: Галстук 2 в 1 -->
+                <!-- Повторить для остальных товаров -->
                 <div class="col-md-4 mb-4">
-                    <div class="card text-center">
+                    <div class="card premium-card text-center">
                         <img src="https://via.placeholder.com/300x400?text=Галстук+2+в+1" class="card-img-top" alt="Галстук 2 в 1">
                         <div class="card-body">
                             <h5 class="card-title">Галстук 2 в 1 (бантик + брошь)</h5>
-                            <p class="card-text">Размер 14 х 14 см.</p>
-                            <div class="row text-center">
-                                <div class="col">10 шт. - 390 руб.</div>
-                                <div class="col">20 шт. - 380 руб.</div>
-                                <div class="col">30 шт. - 375 руб.</div>
-                                <div class="col">100 шт. - 360 руб.</div>
-                            </div>
-                            <h6 class="mt-3">Цвета ткани:</h6>
-                            <div class="row justify-content-center color-options">
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Синий" alt="Синий" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Синий" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Красный" alt="Красный" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Красный" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Черный" alt="Черный" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Черный" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Зеленый" alt="Зеленый" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Зеленый" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Бордовый" alt="Бордовый" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Бордовый" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Клетка" alt="Клетка" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Клетка" class="img-fluid"></div>
-                            </div>
+                            <p class="card-text">Размер: 14 x 14 см</p>
+                            <p class="card-text price">
+                                <span>10 шт. - 390 руб.</span>
+                                <span>20 шт. - 380 руб.</span>
+                                <span>30 шт. - 375 руб.</span>
+                                <span>100 шт. - 360 руб.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Карточка товара: Дуэт набор -->
                 <div class="col-md-4 mb-4">
-                    <div class="card text-center">
+                    <div class="card premium-card text-center">
                         <img src="https://via.placeholder.com/300x400?text=Дуэт+набор" class="card-img-top" alt="Дуэт набор">
                         <div class="card-body">
                             <h5 class="card-title">Дуэт набор</h5>
-                            <p class="card-text">Галстук-регат 32 см + галстук-бантик 12 см.</p>
-                            <div class="row text-center">
-                                <div class="col">10 шт. - 390 руб.</div>
-                                <div class="col">20 шт. - 380 руб.</div>
-                                <div class="col">30 шт. - 375 руб.</div>
-                                <div class="col">100 шт. - 360 руб.</div>
-                            </div>
-                            <h6 class="mt-3">Цвета ткани:</h6>
-                            <div class="row justify-content-center color-options">
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Синий" alt="Синий" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Синий" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Красный" alt="Красный" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Красный" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Черный" alt="Черный" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Черный" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Зеленый" alt="Зеленый" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Зеленый" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Бордовый" alt="Бордовый" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Бордовый" class="img-fluid"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Клетка" alt="Клетка" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Клетка" class="img-fluid"></div>
-                            </div>
+                            <p class="card-text">Галстук-регат 32 см + Галстук-бантик 12 см</p>
+                            <p class="card-text price">
+                                <span>10 шт. - 390 руб.</span>
+                                <span>20 шт. - 380 руб.</span>
+                                <span>30 шт. - 375 руб.</span>
+                                <span>100 шт. - 360 руб.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card premium-card text-center">
+                        <img src="https://via.placeholder.com/300x400?text=Галстук-регат+32+см" class="card-img-top" alt="Галстук-регат 32 см">
+                        <div class="card-body">
+                            <h5 class="card-title">Галстук-регат 32 см</h5>
+                            <p class="card-text">Размер: 32 x 7 см</p>
+                            <p class="card-text price">
+                                <span>10 шт. - 390 руб.</span>
+                                <span>20 шт. - 380 руб.</span>
+                                <span>30 шт. - 375 руб.</span>
+                                <span>100 шт. - 360 руб.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card premium-card text-center">
+                        <img src="https://via.placeholder.com/300x400?text=Галстук-регат+28+см" class="card-img-top" alt="Галстук-регат 28 см">
+                        <div class="card-body">
+                            <h5 class="card-title">Галстук-регат 28 см</h5>
+                            <p class="card-text">Размер: 28 x 6 см</p>
+                            <p class="card-text price">
+                                <span>10 шт. - 390 руб.</span>
+                                <span>20 шт. - 380 руб.</span>
+                                <span>30 шт. - 375 руб.</span>
+                                <span>100 шт. - 360 руб.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card premium-card text-center">
+                        <img src="https://via.placeholder.com/300x400?text=Галстук-бантик" class="card-img-top" alt="Галстук-бантик">
+                        <div class="card-body">
+                            <h5 class="card-title">Галстук-бантик</h5>
+                            <p class="card-text">Размер: 12 x 14 см</p>
+                            <p class="card-text price">
+                                <span>10 шт. - 390 руб.</span>
+                                <span>20 шт. - 380 руб.</span>
+                                <span>30 шт. - 375 руб.</span>
+                                <span>100 шт. - 360 руб.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -210,23 +153,13 @@
         <div class="container">
             <h2 class="text-center mb-4">Контакты</h2>
             <p class="text-center">Свяжитесь с нами для получения дополнительной информации или размещения заказа.</p>
+            <p class="text-center">
+                <i class="fas fa-phone"></i> +7 123 456 78 90 <br>
+                <i class="fas fa-envelope"></i> info@bertoldi.ru
+            </p>
         </div>
     </section>
 
-    <!-- Подвал -->
-    <footer>
-        <p>&copy; 2024 Bertoldi. Все права защищены.</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.color-option').click(function() {
-                var newSrc = $(this).data('image');
-                $(this).closest('.card').find('.card-img-top').attr('src', newSrc);
-            });
-        });
-    </script>
 </body>
 </html>
