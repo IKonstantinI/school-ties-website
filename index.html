@@ -6,14 +6,84 @@
     <title>Галстуки Bertoldi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <style>
-        body { font-family: Arial, sans-serif; }
-        .header, .footer { background: #343a40; color: #fff; }
-        .hero { background: url('https://via.placeholder.com/1920x600?text=Bertoldi+Галстуки') no-repeat center center/cover; height: 60vh; }
-        .product-image { height: 200px; object-fit: cover; }
-        .color-option { cursor: pointer; }
-        .color-option:hover { opacity: 0.8; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .header .nav-link {
+            color: #fff;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1920x600?text=Bertoldi+Галстуки') no-repeat center center/cover;
+            height: 60vh;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .card-body h5 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-body .card-text {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-body .row {
+            margin-bottom: 1rem;
+        }
+
+        .card-body .color-options img {
+            cursor: pointer;
+        }
+
+        .card-body .color-options img:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -24,16 +94,16 @@
             <div class="fs-3">Bertoldi</div>
             <nav>
                 <ul class="nav">
-                    <li class="nav-item"><a href="#about" class="nav-link text-white">О нас</a></li>
-                    <li class="nav-item"><a href="#collection" class="nav-link text-white">Коллекция Bertoldi</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link text-white">Контакты</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+                    <li class="nav-item"><a href="#collection" class="nav-link">Коллекция Bertoldi</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Главный экран -->
-    <section id="hero" class="hero d-flex align-items-center justify-content-center text-center text-white">
+    <section id="hero" class="hero">
         <div class="container">
             <h1>Идеальные галстуки для школьников и не только</h1>
             <a href="#collection" class="btn btn-danger btn-lg mt-3">Выбрать галстук</a>
@@ -53,10 +123,10 @@
         <div class="container">
             <h2 class="text-center mb-4">Коллекция Bertoldi</h2>
             <div class="row">
-                <!-- Карточка товара -->
+                <!-- Карточка товара: Галстук-бантик мини -->
                 <div class="col-md-4 mb-4">
                     <div class="card text-center">
-                        <img src="https://via.placeholder.com/300x400?text=Галстук-бантик+мини" class="card-img-top product-image" alt="Галстук-бантик мини">
+                        <img src="https://via.placeholder.com/300x400?text=Галстук-бантик+мини" class="card-img-top" alt="Галстук-бантик мини">
                         <div class="card-body">
                             <h5 class="card-title">Галстук-бантик мини</h5>
                             <p class="card-text">Размер 11 х 11 см.</p>
@@ -67,34 +137,96 @@
                                 <div class="col">100 шт. - 360 руб.</div>
                             </div>
                             <h6 class="mt-3">Цвета ткани:</h6>
-                            <div class="row justify-content-center">
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Синий" alt="Синий" class="img-fluid color-option"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Красный" alt="Красный" class="img-fluid color-option"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Черный" alt="Черный" class="img-fluid color-option"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Зеленый" alt="Зеленый" class="img-fluid color-option"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Бордовый" alt="Бордовый" class="img-fluid color-option"></div>
-                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Клетка" alt="Клетка" class="img-fluid color-option"></div>
+                            <div class="row justify-content-center color-options">
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Синий" alt="Синий" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Синий" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Красный" alt="Красный" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Красный" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Черный" alt="Черный" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Черный" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Зеленый" alt="Зеленый" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Зеленый" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Бордовый" alt="Бордовый" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Бордовый" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Клетка" alt="Клетка" data-image="https://via.placeholder.com/300x400?text=Галстук-бантик+мини+Клетка" class="img-fluid"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Другие карточки товаров аналогичным образом -->
+                <!-- Карточка товара: Галстук 2 в 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <img src="https://via.placeholder.com/300x400?text=Галстук+2+в+1" class="card-img-top" alt="Галстук 2 в 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Галстук 2 в 1 (бантик + брошь)</h5>
+                            <p class="card-text">Размер 14 х 14 см.</p>
+                            <div class="row text-center">
+                                <div class="col">10 шт. - 390 руб.</div>
+                                <div class="col">20 шт. - 380 руб.</div>
+                                <div class="col">30 шт. - 375 руб.</div>
+                                <div class="col">100 шт. - 360 руб.</div>
+                            </div>
+                            <h6 class="mt-3">Цвета ткани:</h6>
+                            <div class="row justify-content-center color-options">
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Синий" alt="Синий" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Синий" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Красный" alt="Красный" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Красный" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Черный" alt="Черный" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Черный" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Зеленый" alt="Зеленый" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Зеленый" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Бордовый" alt="Бордовый" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Бордовый" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Клетка" alt="Клетка" data-image="https://via.placeholder.com/300x400?text=Галстук+2+в+1+Клетка" class="img-fluid"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка товара: Дуэт набор -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <img src="https://via.placeholder.com/300x400?text=Дуэт+набор" class="card-img-top" alt="Дуэт набор">
+                        <div class="card-body">
+                            <h5 class="card-title">Дуэт набор</h5>
+                            <p class="card-text">Галстук-регат 32 см + галстук-бантик 12 см.</p>
+                            <div class="row text-center">
+                                <div class="col">10 шт. - 390 руб.</div>
+                                <div class="col">20 шт. - 380 руб.</div>
+                                <div class="col">30 шт. - 375 руб.</div>
+                                <div class="col">100 шт. - 360 руб.</div>
+                            </div>
+                            <h6 class="mt-3">Цвета ткани:</h6>
+                            <div class="row justify-content-center color-options">
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Синий" alt="Синий" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Синий" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Красный" alt="Красный" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Красный" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Черный" alt="Черный" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Черный" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Зеленый" alt="Зеленый" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Зеленый" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Бордовый" alt="Бордовый" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Бордовый" class="img-fluid"></div>
+                                <div class="col-md-2 mb-2"><img src="https://via.placeholder.com/50x50?text=Клетка" alt="Клетка" data-image="https://via.placeholder.com/300x400?text=Дуэт+набор+Клетка" class="img-fluid"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
 
     <!-- Контакты -->
-    <section id="contact" class="py-5 footer">
-        <div class="container text-center">
-            <h2 class="mb-4">Контакты</h2>
-            <p>Свяжитесь с нами для получения дополнительной информации или размещения заказа.</p>
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-4">Контакты</h2>
+            <p class="text-center">Свяжитесь с нами для получения дополнительной информации или размещения заказа.</p>
         </div>
     </section>
 
-    <!-- Скрипты -->
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2024 Bertoldi. Все права защищены.</p>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.color-option').click(function() {
+                var newSrc = $(this).data('image');
+                $(this).closest('.card').find('.card-img-top').attr('src', newSrc);
+            });
+        });
+    </script>
 </body>
 </html>
