@@ -3,6 +3,8 @@ body {
     font-family: 'Engravers', serif; /* Используем шрифт Engravers для премиального вида */
     color: #333;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -42,9 +44,8 @@ header {
     font-weight: bold;
 }
 
-.premium-card .card-text.price {
+.premium-card .card-text {
     font-size: 1rem;
-    font-weight: bold;
 }
 
 .premium-card .card-img-top {
@@ -77,6 +78,8 @@ header {
 .price-list {
     list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: left; /* Выравнивание по левому краю */
 }
 
 .price-list li {
