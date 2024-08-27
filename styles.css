@@ -48,6 +48,8 @@ header {
 }
 
 .premium-card .card-img-top {
+    max-height: 400px; /* Максимальная высота изображения */
+    object-fit: cover; /* Сохранение пропорций и заполнение */
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -70,4 +72,14 @@ header {
 .btn-lg {
     padding: 1rem 2rem;
     font-size: 1.25rem;
+}
+
+.price-list {
+    list-style: none;
+    padding: 0;
+}
+
+.price-list li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
