@@ -27,6 +27,7 @@ header {
 
 #hero h1 {
     font-size: 3rem;
+    font-weight: bold;
 }
 
 .card {
@@ -82,7 +83,17 @@ header {
     text-align: left; /* Выравнивание по левому краю */
 }
 
-.price-list li {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.price-quantity {
+    font-weight: bold;
+}
+
+.price-value {
+    color: #e74c3c; /* Цвет для цен */
 }
