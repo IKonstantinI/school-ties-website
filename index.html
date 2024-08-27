@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школьные Галстуки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">Школьные Галстуки</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#collection">Коллекция</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#cart">Корзина</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section id="hero">
+        <div class="container">
+            <h1>Идеальные галстуки для школьников</h1>
+            <a href="#collection" class="btn">Выбрать галстук</a>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Мы предлагаем качественные галстуки для школьной формы, которые соответствуют всем требованиям учебных заведений.</p>
+        </div>
+    </section>
+
+    <!-- Коллекция -->
+    <section id="collection">
+        <div class="container">
+            <h2>Коллекция</h2>
+            <div class="product-gallery">
+                <!-- Карточка товара -->
+                <div class="product-item" data-product-id="1" data-product-name="Галстук классический" data-product-price="300">
+                    <img src="https://via.placeholder.com/300x400?text=Галстук+1" alt="Галстук классический">
+                    <p>Галстук классический - 300 руб.</p>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+                <div class="product-item" data-product-id="2" data-product-name="Галстук синий" data-product-price="350">
+                    <img src="https://via.placeholder.com/300x400?text=Галстук+2" alt="Галстук синий">
+                    <p>Галстук синий - 350 руб.</p>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+                <!-- Другие товары -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Корзина -->
+    <section id="cart">
+        <div class="container">
+            <h2>Корзина</h2>
+            <ul id="cart-items"></ul>
+            <form id="checkout-form">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <input type="email" id="email" placeholder="Ваш Email" required>
+                <button type="submit" class="btn">Оформить заказ</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Телефон: +7 123 456 7890</p>
+            <p>Email: info@schoolties.ru</p>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Школьные Галстуки. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
