@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Коллекция Bertoldi - Галстуки премиум-класса оптом</title>
+    <title>Коллекция Bertoldi - Галстуки оптом</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Arial&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Коллекция Bertoldi - Галстуки премиум-класса оптом</h1>
-        <p>Сделайте ваш ассортимент роскошным с нашими элегантными галстуками.</p>
+        <h1>Коллекция Bertoldi - Галстуки оптом</h1>
+        <p>Лучшие галстуки для вашего учебного заведения.</p>
     </header>
     
     <section class="hero">
@@ -21,7 +21,7 @@
             <div class="overlay"></div>
         </div>
         <div class="hero-content">
-            <h2>Премиальный стиль для вашего бизнеса</h2>
+            <h2>Галстуки для школьников и студентов</h2>
             <button>Купить сейчас</button>
         </div>
     </section>
@@ -48,17 +48,6 @@
                         <span>30 шт.</span> - 375 руб.<br>
                         <span>100 шт.</span> - 360 руб.
                     </p>
-                    <div class="color-options">
-                        <label>Выберите цвет:</label>
-                        <div class="colors">
-                            <span class="color" style="background-color: #000;" data-img="https://via.placeholder.com/400x300/000000"></span>
-                            <span class="color" style="background-color: #333;" data-img="https://via.placeholder.com/400x300/333333"></span>
-                            <span class="color" style="background-color: #555;" data-img="https://via.placeholder.com/400x300/555555"></span>
-                            <span class="color" style="background-color: #777;" data-img="https://via.placeholder.com/400x300/777777"></span>
-                            <span class="color" style="background-color: #999;" data-img="https://via.placeholder.com/400x300/999999"></span>
-                            <span class="color" style="background-color: #bbb;" data-img="https://via.placeholder.com/400x300/bbbbbb"></span>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- Дальше идут остальные карточки товаров... -->
@@ -71,11 +60,15 @@
     </footer>
 
     <script>
-        // JavaScript для изменения цвета и изображения в карточках товаров
-        document.querySelectorAll('.color').forEach(function(color) {
-            color.addEventListener('click', function() {
-                const img = this.getAttribute('data-img');
-                this.closest('.product-card').querySelector('.product-carousel img').src = img;
+        // JavaScript для простой замены контента в карточках товаров
+        document.querySelectorAll('.product-card').forEach(function(card) {
+            const img = card.querySelector('.product-carousel img');
+            img.addEventListener('click', function() {
+                // Легкая замена изображения и текста
+                img.src = prompt('Введите URL нового изображения:', img.src) || img.src;
+                card.querySelector('h3').textContent = prompt('Введите новое название товара:', card.querySelector('h3').textContent) || card.querySelector('h3').textContent;
+                card.querySelector('.details').textContent = prompt('Введите новые детали:', card.querySelector('.details').textContent) || card.querySelector('.details').textContent;
+                card.querySelector('.price').innerHTML = prompt('Введите новую цену:', card.querySelector('.price').innerHTML) || card.querySelector('.price').innerHTML;
             });
         });
     </script>
