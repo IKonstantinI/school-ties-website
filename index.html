@@ -15,10 +15,7 @@
     
     <section class="hero">
         <div class="hero-background">
-            <video autoplay muted loop>
-                <source src="https://www.example.com/video.mp4" type="video/mp4">
-            </video>
-            <div class="overlay"></div>
+            <img src="https://via.placeholder.com/1200x400" alt="Галстуки Bertoldi" class="hero-image">
         </div>
         <div class="hero-content">
             <h2>Галстуки для школьников и студентов</h2>
@@ -36,9 +33,7 @@
         <div class="product-grid">
             <!-- Пример карточки товара -->
             <div class="product-card">
-                <div class="product-carousel">
-                    <img src="https://via.placeholder.com/400x300" alt="Галстук-регат 32 см">
-                </div>
+                <img src="https://via.placeholder.com/400x300" alt="Галстук-регат 32 см">
                 <div class="product-info">
                     <h3>Галстук-регат 32 см (арт. 169047205)</h3>
                     <p class="details">Размер: 32 x 7 см</p>
@@ -58,19 +53,5 @@
         <p>© 2024 Bertoldi. Все права защищены.</p>
         <p><a href="#">Политика конфиденциальности</a> | <a href="#">Контакты</a></p>
     </footer>
-
-    <script>
-        // JavaScript для простой замены контента в карточках товаров
-        document.querySelectorAll('.product-card').forEach(function(card) {
-            const img = card.querySelector('.product-carousel img');
-            img.addEventListener('click', function() {
-                // Легкая замена изображения и текста
-                img.src = prompt('Введите URL нового изображения:', img.src) || img.src;
-                card.querySelector('h3').textContent = prompt('Введите новое название товара:', card.querySelector('h3').textContent) || card.querySelector('h3').textContent;
-                card.querySelector('.details').textContent = prompt('Введите новые детали:', card.querySelector('.details').textContent) || card.querySelector('.details').textContent;
-                card.querySelector('.price').innerHTML = prompt('Введите новую цену:', card.querySelector('.price').innerHTML) || card.querySelector('.price').innerHTML;
-            });
-        });
-    </script>
 </body>
 </html>
