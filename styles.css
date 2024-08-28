@@ -40,7 +40,7 @@ header {
     border-radius: 5px;
 }
 
-.advantages, .products, .testimonials, .about {
+.advantages, .products, .about {
     padding: 20px;
     text-align: center;
 }
@@ -52,20 +52,18 @@ header {
 
 .advantages li {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.product-carousel {
-    display: flex;
-    overflow-x: auto;
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
     background-color: #fff;
 }
 
 .product-card {
-    flex: 0 0 auto;
-    width: 400px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
