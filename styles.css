@@ -1,56 +1,63 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Helvetica', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-.product-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #c8102e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.advantages, .products, .testimonials, .about {
     padding: 20px;
+    text-align: center;
+}
+
+.product-carousel {
+    display: flex;
+    overflow-x: scroll;
 }
 
 .product-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    flex: 0 0 auto;
+    width: 200px;
     margin: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
     text-align: center;
 }
 
-.product-card h2 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.product-card p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.product-card ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.product-card ul li {
-    margin: 5px 0;
-}
-
-.carousel img {
-    max-width: 100%;
-    border-radius: 5px;
+footer a {
+    color: #c8102e;
+    text-decoration: none;
 }
