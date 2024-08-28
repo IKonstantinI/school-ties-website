@@ -33,9 +33,11 @@ header {
     position: relative;
 }
 
-.hero-image {
+.product-card img {
     width: 100%;
     height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }
 
 .hero-content {
