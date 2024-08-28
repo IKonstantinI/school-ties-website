@@ -1,42 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cartItems = [];
+document.querySelectorAll('.carousel').forEach(function(carousel) {
+    let images = carousel.querySelectorAll('img');
+    let currentIndex = 0;
 
-    // Функция для обновления корзины
-    function updateCart() {
-        const cartList = document.getElementById('cart-items');
-        cartList.innerHTML = '';
-        cartItems.forEach((item, index) => {
-            const li = document.createElement('li');
-            li.classList.add('list-group-item');
-            li.textContent = `${item.name} - ${item.price} руб.`;
-            cartList.appendChild(li);
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.style.display = i === index ? 'block' : 'none';
         });
     }
 
-    // Добавление товара в корзину
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', event => {
-            const productItem = event.target.closest('.card');
-            const productId = productItem.getAttribute('data-product-id');
-            const productName = productItem.querySelector('.card-title').textContent;
-            const productPrice = productItem.querySelector('.card-text').textContent.replace(' руб.', '');
-            cartItems.push({ id: productId, name: productName, price: productPrice });
-            updateCart();
-        });
-    });
+    showImage(currentIndex);
 
-    // Отправка данных заказа на email
-    document.getElementById('checkout-form').addEventListener('submit', event => {
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const orderDetails = cartItems.map(item => `${item.name} - ${item.price} руб.`).join(', ');
-
-        const emailBody = `Имя: ${name}\nEmail: ${email}\nЗаказ: ${orderDetails}`;
-        window.location.href = `mailto:info@schoolties.ru?subject=Заказ&body=${encodeURIComponent(emailBody)}`;
-
-        alert('Ваш заказ отправлен!');
-        cartItems.length = 0; // Очистить корзину после отправки
-        updateCart();
+    carousel.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
     });
 });
