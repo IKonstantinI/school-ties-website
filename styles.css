@@ -1,99 +1,56 @@
-/* Основные стили для сайта */
 body {
-    font-family: 'Engravers', serif; /* Используем шрифт Engravers для премиального вида */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
 header {
+    text-align: center;
+    padding: 20px;
     background-color: #333;
-}
-
-.logo {
-    font-family: 'Engravers', serif;
-}
-
-.nav-link {
-    font-size: 16px;
-    margin: 0 15px;
-}
-
-#hero {
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.card {
-    border: none;
-    border-radius: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.premium-card .card-body {
-    padding: 2rem;
-}
-
-.premium-card .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.premium-card .card-text {
-    font-size: 1rem;
-}
-
-.premium-card .card-img-top {
-    max-height: 400px; /* Максимальная высота изображения */
-    object-fit: cover; /* Сохранение пропорций и заполнение */
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.bg-dark {
-    background-color: #333;
-}
-
-.text-white {
     color: #fff;
 }
 
-.text-center {
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.container {
-    max-width: 1200px;
+.product-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
 }
 
-.btn-lg {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
+.product-card p {
+    font-size: 14px;
+    margin: 5px 0;
 }
 
-.price-list {
-    list-style: none;
+.product-card ul {
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    text-align: left; /* Выравнивание по левому краю */
 }
 
-.price-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #e0e0e0;
+.product-card ul li {
+    margin: 5px 0;
 }
 
-.price-quantity {
-    font-weight: bold;
-}
-
-.price-value {
-    color: #e74c3c; /* Цвет для цен */
+.carousel img {
+    max-width: 100%;
+    border-radius: 5px;
 }
