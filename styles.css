@@ -14,7 +14,7 @@ header {
     background-position: top center; /* Позиционируем изображение так, чтобы оно начиналось с верха */
     background-repeat: no-repeat; /* Убираем повторение изображения */
     color: white;
-    height: 300px; /* Установите подходящую высоту */
+    height: 600px; /* Установите подходящую высоту */
     display: flex;
     align-items: center;
     justify-content: center;
