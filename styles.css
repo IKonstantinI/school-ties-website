@@ -38,6 +38,12 @@ header h1 {
     text-align: center;
 }
 
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
 .product-card h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -68,4 +74,20 @@ header h1 {
 
 .order-button:hover {
     background-color: #0056b3;
+}
+
+.about {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
 }
