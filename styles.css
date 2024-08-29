@@ -11,10 +11,10 @@ body {
 header {
     background-image: url('https://i.postimg.cc/rpVV35sb/temp-Imagew-Cc14-W.avif'); /* Убедитесь, что URL правильный */
     background-size: cover;
-    background-position: top; /* Позиционируем изображение так, чтобы оно начиналось с верха */
+    background-position: top center; /* Позиционируем изображение так, чтобы оно начиналось с верха */
     background-repeat: no-repeat; /* Убираем повторение изображения */
     color: white;
-    height: 400px; /* Установите подходящую высоту */
+    height: 300px; /* Установите подходящую высоту */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,15 +63,6 @@ header .about a:hover {
     align-items: center;
     padding: 40px 20px;
     background-color: #fff;
-}
-
-/* Стили для заголовка блока с товарами */
-.products h1 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    font-family: 'Georgia', serif;
-    color: #333;
-    text-align: center;
 }
 
 /* Стили для карточек товаров */
