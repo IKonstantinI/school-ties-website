@@ -1,41 +1,82 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
-    background-image: url('https://i.postimg.cc/rpVV35sb/temp-Imagew-Cc14-W.avif');
+    background-image: url('/mnt/data/шапка сайта.jpg');
     background-size: cover;
     background-position: top;
     color: white;
-    height: 500px;
+    height: 600px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
+    padding: 20px;
 }
 
 header h1 {
     font-size: 48px;
     margin: 0;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.about {
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон для контраста */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    color: #fff;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+.about a {
+    color: #ffcc00;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.about a:hover {
+    color: #ff9900;
 }
 
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: #fff;
 }
 
 .product-card {
-    background-color: white;
+    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
 .product-card img {
@@ -47,10 +88,13 @@ header h1 {
 .product-card h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    color: #333;
 }
 
 .product-card p {
     margin: 5px 0;
+    color: #555;
 }
 
 .product-card ul {
@@ -59,6 +103,7 @@ header h1 {
     margin: 10px 0;
     font-size: 18px;
     line-height: 1.5;
+    color: #555;
 }
 
 .order-button {
@@ -74,20 +119,4 @@ header h1 {
 
 .order-button:hover {
     background-color: #0056b3;
-}
-
-.about {
-    padding: 20px;
-    background-color: white;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.about p {
-    font-size: 18px;
-    line-height: 1.6;
 }
