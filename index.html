@@ -3,160 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bertoldi - Галстуки оптом</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Arial&display=swap" rel="stylesheet">
+    <title>Bertoldi - Галстуки для школьников и студентов</title>
+    <style>
+        /* Общие стили для сайта */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-image: url('/mnt/data/шапка%20саи%CC%86та.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-content {
+            background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .header-content h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .header-content p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .header-content a {
+            color: #FFD700; /* Цвет для ссылки */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .products {
+            padding: 20px;
+        }
+
+        .products h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            background: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-card .content {
+            padding: 15px;
+        }
+
+        .product-card h3 {
+            margin: 0;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            margin: 5px 0;
+        }
+
+        .order-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .order-button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #FFD700; /* Цвет для ссылок в футере */
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Галстуки оптом от Bertoldi</h1>
-            <p>Идеальные аксессуары для вашего учебного заведения</p>
+            <h1>Стильные галстуки для школьников и студентов</h1>
+            <p>Мы предлагаем качественные галстуки, которые идеально подойдут для школьной формы и не только. Здесь вы можете заказать галстуки Bertoldi для детей вашего класса или школы мелким оптом по привлекательным ценам. Цена включает стоимость доставки до пункта СДЭК в вашем городе. Если вам нужно 1-2 единицы, то их удобнее заказать в нашем магазине на Wildberries или перейдите по <a href="https://clck.ru/3Csh8F">ссылке</a>.</p>
         </div>
     </header>
-    
-    <section class="hero">
-        <div class="hero-background">
-            <img src="https://i.postimg.cc/XNm78C84/temp-Image3u-ZE0-H.avif" alt="Галстуки Bertoldi" class="hero-image">
-        </div>
-        <div class="hero-content">
-            <h2>Стильные галстуки для школьников и студентов</h2>
-            <p>Мы предлагаем качественные галстуки, которые идеально подойдут для школьной формы и не только. Здесь вы можете заказать галстуки Bertoldi (Бертольди) для детей вашего класса или школы мелким оптом по привлекательным ценам. Цена включает стоимость доставки до пункта СДЭК в вашем городе. Если вам нужно 1-2 единицы, то их удобнее заказать в нашем магазине на Wildberries (по поиску «галстуки Bertoldi») или перейдите по <a href="https://clck.ru/3Csh8F">ссылке</a>.</p>
-        </div>
-    </section>
-    
+
     <section class="products">
-        <h2>Наши товары</h2>
+        <h2>Наша коллекция</h2>
         <div class="product-grid">
-            <!-- Карточки товаров -->
+            <!-- Галстук-регат 32 см -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Галстук-регат 32 см">
-                <div class="product-info">
+                <img src="https://via.placeholder.com/300x200" alt="Галстук-регат 32 см">
+                <div class="content">
                     <h3>Галстук-регат 32 см (арт. 169047205)</h3>
-                    <p class="details">Размер: 32 x 7 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
+                    <p>Размер: 32 x 7 см</p>
+                    <p>Цена: 10 шт. - 390 руб., 20 шт. - 380 руб., 30 шт. - 375 руб., 100 шт. - 360 руб.</p>
+                    <a class="order-button" href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук-регат%2032%20см%20(арт.%20169047205)%20%0A%0А%20тираж%20____%0A%0AДоставка%20до%20пункта%20СДЭК%20в%20.%20____________________%20по%20адресу%20________________.%0A%0AИмя%20получателя%20____________________,%20тел.%20+7_________">Заказать</a>
                 </div>
             </div>
-
+            <!-- Галстук-регат 28 см -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Галстук-регат 28 см">
-                <div class="product-info">
+                <img src="https://via.placeholder.com/300x200" alt="Галстук-регат 28 см">
+                <div class="content">
                     <h3>Галстук-регат 28 см (арт. 185085101)</h3>
-                    <p class="details">Размер: 28 x 6 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
+                    <p>Размер: 28 x 6 см</p>
+                    <p>Цена: 10 шт. - 390 руб., 20 шт. - 380 руб., 30 шт. - 375 руб., 100 шт. - 360 руб.</p>
+                    <a class="order-button" href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук-регат%2028%20см%20(арт.%20185085101)%20%0А%0А%20тираж%20____%0A%0АДоставка%20до%20пункта%20СДЭК%20в%20.%20____________________%20по%20адресу%20________________.%0A%0АИмя%20получателя%20____________________,%20тел.%20+7_________">Заказать</a>
                 </div>
             </div>
-
+            <!-- Галстук-бантик -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Галстук-бантик">
-                <div class="product-info">
+                <img src="https://via.placeholder.com/300x200" alt="Галстук-бантик">
+                <div class="content">
                     <h3>Галстук-бантик (арт. 227728772)</h3>
-                    <p class="details">Размер: 12 x 14 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
+                    <p>Размер: 12 x 14 см</p>
+                    <p>Цена: 10 шт. - 390 руб., 20 шт. - 380 руб., 30 шт. - 375 руб., 100 шт. - 360 руб.</p>
+                    <a class="order-button" href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук-бантик%20(арт.%20227728772)%20%0А%0А%20тираж%20____%0A%0АДоставка%20до%20пункта%20СДЭК%20в%20.%20____________________%20по%20адресу%20________________.%0A%0АИмя%20получателя%20____________________,%20тел.%20+7_________">Заказать</a>
                 </div>
             </div>
-
+            <!-- Галстук-бантик мини -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Галстук-бантик мини">
-                <div class="product-info">
+                <img src="https://via.placeholder.com/300x200" alt="Галстук-бантик мини">
+                <div class="content">
                     <h3>Галстук-бантик мини (арт. 255651369)</h3>
-                    <p class="details">Размер: 11 x 11 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Галстук 2 в 1">
-                <div class="product-info">
-                    <h3>Галстук 2 в 1 (бантик + брошь) (арт. 247853517)</h3>
-                    <p class="details">Размер: 14 x 14 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Дуэт набор">
-                <div class="product-info">
-                    <h3>Дуэт набор – галстук-регат 32 см + галстук-бантик (арт. 1748847790)</h3>
-                    <p class="details">Галстук-регат: 32 x 7 см; Галстук-бантик: 12 x 14 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Галстук-галочка">
-                <div class="product-info">
-                    <h3>Галстук-галочка (арт. 203529123)</h3>
-                    <p class="details">Размер: 15 x 10 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Галстук-регат 42 см">
-                <div class="product-info">
-                    <h3>Галстук-регат 42 см (арт. 219550440)</h3>
-                    <p class="details">Размер: 42 x 8 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Галстук-самовяз">
-                <div class="product-info">
-                    <h3>Галстук-самовяз 145 см (арт. 245739809)</h3>
-                    <p class="details">Размер: 145 x 7 см</p>
-                    <p class="price">
-                        <span>10 шт.</span> - 390 руб.<br>
-                        <span>20 шт.</span> - 380 руб.<br>
-                        <span>30 шт.</span> - 375 руб.<br>
-                        <span>100 шт.</span> - 360 руб.
-                    </p>
+                    <p>Размер: 11 x 11 см</p>
+                    <p>Цена: 10 шт. - 390 руб., 20 шт. - 380 руб., 30 шт. - 375 руб., 100 шт. - 360 руб.</p>
+                    <a class="order-button" href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук-бантик%20мини%20(арт.%20255651369)%20%0А%0А%20тираж%20____%0A%0АДоставка%20до%20пункта%20СДЭК%20в%20.%20____________________%20по%20адресу%20________________.%0A%0АИмя%20получателя%20____________________,%20тел.%20+7_________">Заказать</a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <footer>
         <p>© 2024 Bertoldi. Все права защищены.</p>
         <p><a href="#">Политика конфиденциальности</a> | <a href="#">Контакты</a></p>
