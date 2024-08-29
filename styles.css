@@ -1,3 +1,4 @@
+/* Основные стили для тела страницы */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -6,28 +7,30 @@ body {
     color: #333;
 }
 
+/* Стили для шапки сайта */
 header {
-    background-image: url('https://i.postimg.cc/rpVV35sb/temp-Imagew-Cc14-W.avif');
+    background-image: url('https://i.postimg.cc/rpVV35sb/temp-Imagew-Cc14-W.avif'); /* Убедитесь, что URL правильный */
     background-size: cover;
     background-position: center;
     color: white;
-    height: 400px; /* Уменьшена высота шапки для лучшего визуального восприятия */
+    height: 400px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Добавим фон для улучшения читаемости текста */
 }
 
+/* Стили для блока с текстом в шапке */
 header .about {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 
+/* Стили для заголовка в шапке */
 header .about h2 {
     font-size: 32px;
     margin-bottom: 10px;
@@ -35,12 +38,14 @@ header .about h2 {
     color: #fff;
 }
 
+/* Стили для текста в шапке */
 header .about p {
     font-size: 18px;
     line-height: 1.6;
     color: #f5f5f5;
 }
 
+/* Стили для ссылок в шапке */
 header .about a {
     color: #ffcc00;
     text-decoration: underline;
@@ -51,6 +56,7 @@ header .about a:hover {
     color: #ff9900;
 }
 
+/* Стили для блока с товарами */
 .products {
     display: flex;
     flex-direction: column;
@@ -59,6 +65,7 @@ header .about a:hover {
     background-color: #fff;
 }
 
+/* Стили для заголовка блока с товарами */
 .products h1 {
     font-size: 36px;
     margin-bottom: 40px;
@@ -67,6 +74,7 @@ header .about a:hover {
     text-align: center;
 }
 
+/* Стили для карточек товаров */
 .products .product-card {
     background-color: #f9f9f9;
     padding: 20px;
@@ -79,17 +87,20 @@ header .about a:hover {
     margin: 15px;
 }
 
+/* Стили для карточек товаров при наведении */
 .products .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Стили для изображений в карточках товаров */
 .products .product-card img {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
 }
 
+/* Стили для заголовка в карточках товаров */
 .products .product-card h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -97,6 +108,7 @@ header .about a:hover {
     color: #333;
 }
 
+/* Стили для списка в карточках товаров */
 .products .product-card ul {
     list-style-type: none;
     padding: 0;
@@ -106,6 +118,7 @@ header .about a:hover {
     color: #555;
 }
 
+/* Стили для кнопки заказа */
 .order-button {
     display: inline-block;
     margin-top: 10px;
@@ -117,12 +130,13 @@ header .about a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Стили для кнопки заказа при наведении */
 .order-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
-/* Media query for responsiveness */
+/* Media query для адаптивного дизайна */
 @media (min-width: 600px) {
     .products {
         display: grid;
