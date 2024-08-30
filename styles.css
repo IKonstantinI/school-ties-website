@@ -9,38 +9,52 @@ body {
 
 /* Стили для шапки сайта */
 header {
-    background-image: url('https://i.postimg.cc/rpVV35sb/temp-Imagew-Cc14-W.avif'); /* Убедитесь, что URL правильный */
-    background-size: cover;
-    background-position: top center; /* Позиционируем изображение так, чтобы оно начиналось с верха */
-    background-repeat: no-repeat; /* Убираем повторение изображения */
-    color: white;
-    height: 600px; /* Установите подходящую высоту */
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Высота шапки: 50% от высоты экрана */
+    min-height: 300px; /* Минимальная высота для шапки */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
+}
+
+/* Стили для фона шапки */
+header::before {
+    content: "";
+    background-image: url('https://i.postimg.cc/rpVV35sb/temp-Imagew-Cc14-W.avif'); /* Убедитесь, что URL правильный */
+    background-size: cover;
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Убираем повторение изображения */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Стили для блока с текстом в шапке */
 header .about {
-    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон для улучшения читаемости */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    max-width: 90%; /* Ограничение ширины фона для маленьких экранов */
 }
 
 /* Стили для заголовка в шапке */
 header .about h2 {
-    font-size: 32px;
+    font-size: 2em;
     margin-bottom: 10px;
-    font-family: 'Georgia', serif;
     color: #fff;
+    font-family: 'Georgia', serif;
 }
 
 /* Стили для текста в шапке */
 header .about p {
-    font-size: 18px;
+    font-size: 1.2em;
     line-height: 1.6;
     color: #f5f5f5;
 }
@@ -133,5 +147,20 @@ header .about a:hover {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    header .about {
+        padding: 15px;
+        max-width: 80%; /* Уменьшаем максимальную ширину фона на маленьких экранах */
+    }
+
+    header .about h2 {
+        font-size: 1.5em;
+    }
+
+    header .about p {
+        font-size: 1em;
     }
 }
