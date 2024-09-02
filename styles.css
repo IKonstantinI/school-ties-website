@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,26 +6,28 @@ body {
     box-sizing: border-box;
 }
 
-.site-container {
-    max-width: 1400px; /* Увеличенная максимальная ширина для сайта */
-    margin: 0 auto; /* Центрирование контейнера */
-    padding: 0 20px; /* Отступы по бокам */
+/* Контейнер для центрирования контента и ограничения ширины */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
+/* Шапка сайта */
 header {
     position: relative;
     text-align: center;
     color: white;
-    overflow: hidden;
 }
 
 header img {
     width: 100%;
     height: auto;
-    display: block;
-    object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер */
+    max-height: 400px; /* Максимальная высота изображения */
+    object-fit: cover; /* Обрезка изображения */
 }
 
+/* Стили для заголовка в шапке */
 .header-content {
     position: absolute;
     top: 50%;
@@ -37,21 +40,26 @@ header img {
     color: white;
 }
 
-.header-text {
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для текста */
-    padding: 15px;
-    border-radius: 8px;
-}
-
 .header-content h2 {
     margin: 0;
     font-size: 24px;
 }
 
-main {
+/* Контент */
+.content-section {
     padding: 20px;
+    text-align: center;
 }
 
+.content-section p {
+    margin-bottom: 15px;
+}
+
+.content-section b {
+    font-weight: bold;
+}
+
+/* Заголовок коллекции */
 .centered-heading {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -60,6 +68,7 @@ main {
     margin: 20px 0;
 }
 
+/* Продукты */
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -68,12 +77,14 @@ main {
     padding: 20px;
 }
 
+/* Карточка продукта */
 .product-card {
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
     max-width: 250px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
@@ -82,6 +93,7 @@ main {
     border-radius: 5px;
 }
 
+/* Кнопка заказа */
 .order-button {
     background-color: #4CAF50;
     color: white;
@@ -92,6 +104,17 @@ main {
     margin-top: 10px;
 }
 
-.order-button:hover {
-    background-color: #45a049;
+/* Медиа-запросы */
+@media screen and (min-width: 1200px) {
+    header img {
+        max-height: 300px; /* Высота для больших экранов */
+    }
+}
+
+/* Убедитесь, что шапка и основной контент хорошо масштабируются на всех устройствах */
+@media (max-width: 600px) {
+    .header-content {
+        padding: 15px;
+        font-size: 18px;
+    }
 }
