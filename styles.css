@@ -43,18 +43,6 @@ header img {
     color: white;
 }
 
-.content-section {
-    padding: 20px;
-}
-
-.content-section p {
-    margin-bottom: 15px;
-}
-
-.content-section b {
-    font-weight: bold;
-}
-
 .centered-heading {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -74,15 +62,23 @@ header img {
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
-    max-width: calc(25% - 20px); /* Ширина карточки для 4 карточек в ряду */
-    box-sizing: border-box; /* Учитывает отступы и границы в ширину */
+    width: 200px; /* Фиксированная ширина карточки */
+    height: 300px; /* Фиксированная высота карточки */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширину и высоту */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Равномерное распределение содержимого по высоте */
 }
 
 .product-card img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+.product-card h2, .product-card ul, .order-button {
+    margin: 0;
 }
 
 .order-button {
@@ -92,7 +88,7 @@ header img {
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: auto; /* Отодвигает кнопку вниз */
 }
 
 .order-button:hover {
