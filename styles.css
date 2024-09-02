@@ -9,20 +9,25 @@ header {
     position: relative;
     text-align: center;
     color: white;
-    overflow: hidden; /* Обрезает изображение, если оно выходит за пределы контейнера */
+    overflow: hidden;
 }
 
 header img {
     width: 100%;
     height: auto;
-    max-width: none; /* Убирает ограничение на максимальную ширину */
-    max-height: none; /* Убирает ограничение на максимальную высоту */
+    display: block; /* Убирает отступы снизу у изображения */
+    object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер */
 }
 
 /* Дополнительные стили для больших экранов */
 @media screen and (min-width: 1200px) {
+    header {
+        height: 400px; /* Высота шапки для больших экранов */
+    }
+    
     header img {
-        max-height: 400px; /* Пример высоты для больших экранов */
+        height: 100%; /* Заполняет высоту шапки */
+        object-fit: cover; /* Обеспечивает сохранение пропорций изображения */
     }
 }
 
@@ -35,6 +40,7 @@ header img {
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
+    color: white; /* Белый цвет текста для лучшей видимости на фоне */
 }
 
 .header-content h2 {
@@ -99,5 +105,5 @@ main {
 }
 
 .order-button:hover {
-    background-color: #45a049; /* Более тёмный зелёный для hover состояния */
+    background-color: #45a049;
 }
