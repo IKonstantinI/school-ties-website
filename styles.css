@@ -6,7 +6,7 @@ body {
 }
 
 .site-container {
-    max-width: 1300px; /* Увеличенная ширина сайта */
+    max-width: 1200px; /* Максимальная ширина для сайта */
     margin: 0 auto; /* Центрирование контейнера */
     padding: 0 20px; /* Отступы по бокам */
 }
@@ -22,6 +22,7 @@ header img {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер */
 }
 
 .header-content {
@@ -36,11 +37,25 @@ header img {
     color: white;
 }
 
-.text-block {
-    background-color: rgba(0, 0, 0, 0.6);
+.header-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
     padding: 20px;
-    border-radius: 10px;
-    color: white;
+}
+
+.content-section {
+    text-align: center;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+}
+
+.content-section b {
+    font-weight: bold;
 }
 
 .centered-heading {
@@ -54,31 +69,23 @@ header img {
 .products {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Отступ между карточками */
-    justify-content: space-between; /* Распределение карточек по ширине */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .product-card {
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
-    width: 200px; /* Фиксированная ширина карточки */
-    height: 300px; /* Фиксированная высота карточки */
-    box-sizing: border-box; /* Учитывает отступы и границы в ширину и высоту */
+    max-width: 250px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Равномерное распределение содержимого по высоте */
 }
 
 .product-card img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-}
-
-.product-card h2, .product-card ul, .order-button {
-    margin: 0;
 }
 
 .order-button {
@@ -88,7 +95,7 @@ header img {
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
-    margin-top: auto; /* Отодвигает кнопку вниз */
+    margin-top: 10px;
 }
 
 .order-button:hover {
