@@ -3,12 +3,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f0f0f0;
 }
 
 .site-container {
-    max-width: 1500px; /* Увеличена максимальная ширина для сайта */
-    margin: 0 auto; /* Центрирование контейнера */
-    padding: 0 20px; /* Отступы по бокам */
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
@@ -16,43 +17,41 @@ header {
     text-align: center;
     color: white;
     overflow: hidden;
-}
-
-header img {
-    width: 100%;
-    height: auto;
-    display: block;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/GmnjM6Nq/temp-Imagezm-Kyu-C.avif') no-repeat center center/cover;
+    padding: 60px 20px;
 }
 
 .header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 80%;
-    color: white;
-}
-
-.text-block {
+    position: relative;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
-    color: white;
+    max-width: 80%;
+    margin: 0 auto;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.content-section {
-    padding: 20px;
+.header-content h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.text-block {
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .content-section p {
-    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 .content-section b {
-    font-weight: bold;
+    color: #333;
 }
 
 .centered-heading {
@@ -72,29 +71,56 @@ header img {
 }
 
 .product-card {
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    background: #fff;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     max-width: 250px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.product-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-card ul li {
+    margin-bottom: 5px;
 }
 
 .order-button {
-    background-color: #4CAF50;
+    background-color: #28a745;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
     margin-top: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .order-button:hover {
-    background-color: #45a049;
+    background-color: #218838;
+    transform: scale(1.05);
 }
