@@ -13,10 +13,18 @@ header {
 
 header img {
     width: 100%;
-    max-width: 100%;
     height: auto;
-    object-fit: cover;
+    max-height: 400px; /* Устанавливаем максимальную высоту, например 400px */
+    object-fit: cover; /* Обрезаем изображение, если оно выходит за пределы контейнера */
 }
+
+/* Это необязательно, но если нужно: */
+@media screen and (min-width: 1200px) {
+    header img {
+        max-height: 300px; /* Например, уменьшите высоту на больших экранах */
+    }
+}
+
 
 .header-content {
     position: absolute;
