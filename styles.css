@@ -1,67 +1,78 @@
+/* Общие стили для всего сайта */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f0f0f0;
 }
 
+/* Основной контейнер сайта с увеличенной шириной */
 .site-container {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1500px; /* Увеличенная максимальная ширина для сайта */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 20px; /* Отступы по бокам */
 }
 
+/* Шапка сайта */
 header {
     position: relative;
     text-align: center;
     color: white;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/GmnjM6Nq/temp-Imagezm-Kyu-C.avif') no-repeat center center/cover;
-    padding: 60px 20px;
 }
 
+/* Фон изображения в шапке */
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Содержание шапки, позиционируемое по центру */
 .header-content {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Затемнённый фон */
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
-    margin: 0 auto;
-    display: inline-block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.header-content h2 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin: 0;
-}
-
-.text-block {
-    background: #f4f4f4;
-    padding: 40px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content-section p {
-    line-height: 1.6;
-}
-
-.content-section b {
-    color: #333;
-}
-
+/* Заголовок сайта */
 .centered-heading {
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 32px;
+    font-size: 36px; /* Увеличенный размер шрифта для заголовка */
     font-weight: bold;
-    margin: 20px 0;
+    margin: 40px 0;
+    background-color: #f5f5f5; /* Светлый фон для заголовка */
+    color: #333; /* Тёмный цвет текста для контраста */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Текстовый блок под заголовком */
+.text-block {
+    background-color: #ffffff; /* Белый фон для текстового блока */
+    padding: 30px; /* Увеличенные отступы для большего пространства */
+    border-radius: 10px; /* Скруглённые углы */
+    color: #333; /* Тёмный цвет текста для лучшей читаемости */
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень для придания объёма */
+}
+
+/* Дополнительные стили для текстового блока */
+.content-section p {
+    margin-bottom: 15px;
+    line-height: 1.6; /* Более читаемое межстрочное расстояние */
+}
+
+/* Стили для карточек товаров */
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -70,57 +81,36 @@ header {
     padding: 20px;
 }
 
+/* Стили для каждой карточки товара */
 .product-card {
-    border: 1px solid #ddd;
-    background: #fff;
+    border: 1px solid #ccc;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     max-width: 250px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Лёгкий фон для карточек товаров */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень для карточек */
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
+/* Изображения товаров */
 .product-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-.product-card h2 {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: #333;
-}
-
-.product-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.product-card ul li {
-    margin-bottom: 5px;
-}
-
+/* Кнопки заказа */
 .order-button {
-    background-color: #28a745;
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
     margin-top: 10px;
-    font-size: 1em;
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
 }
 
 .order-button:hover {
-    background-color: #218838;
-    transform: scale(1.05);
+    background-color: #45a049;
 }
