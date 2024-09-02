@@ -6,7 +6,7 @@ body {
 }
 
 .site-container {
-    max-width: 1500px; /* Увеличенная максимальная ширина для сайта */
+    max-width: 1800px; /* Увеличенная максимальная ширина для сайта */
     margin: 0 auto; /* Центрирование контейнера */
     padding: 0 20px; /* Отступы по бокам */
 }
@@ -21,7 +21,13 @@ header {
 header img {
     width: 100%;
     height: auto;
-    display: block;
+    object-fit: cover; /* Изображение будет покрывать блок */
+    object-position: center top; /* Обрезка снизу */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; /* Высота блока в шапке */
+    max-height: calc(100% - 300px); /* Высота блока с учетом обрезки */
 }
 
 .header-content {
