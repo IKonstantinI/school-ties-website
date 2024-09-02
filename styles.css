@@ -5,6 +5,12 @@ body {
     box-sizing: border-box;
 }
 
+.site-container {
+    max-width: 1200px; /* Максимальная ширина для сайта */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 20px; /* Отступы по бокам */
+}
+
 header {
     position: relative;
     text-align: center;
@@ -15,20 +21,8 @@ header {
 header img {
     width: 100%;
     height: auto;
-    display: block; /* Убирает отступы снизу у изображения */
+    display: block;
     object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер */
-}
-
-/* Дополнительные стили для больших экранов */
-@media screen and (min-width: 1200px) {
-    header {
-        height: 400px; /* Высота шапки для больших экранов */
-    }
-    
-    header img {
-        height: 100%; /* Заполняет высоту шапки */
-        object-fit: cover; /* Обеспечивает сохранение пропорций изображения */
-    }
 }
 
 .header-content {
@@ -40,7 +34,7 @@ header img {
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
-    color: white; /* Белый цвет текста для лучшей видимости на фоне */
+    color: white;
 }
 
 .header-content h2 {
