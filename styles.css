@@ -47,6 +47,14 @@ header img {
     font-weight: bold;
 }
 
+.centered-heading {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
 .products {
     display: flex;
     flex-wrap: wrap;
