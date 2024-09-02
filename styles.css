@@ -6,7 +6,7 @@ body {
 }
 
 .site-container {
-    max-width: 1200px; /* Максимальная ширина для сайта */
+    max-width: 1400px; /* Увеличенная максимальная ширина для сайта */
     margin: 0 auto; /* Центрирование контейнера */
     padding: 0 20px; /* Отступы по бокам */
 }
@@ -37,6 +37,12 @@ header img {
     color: white;
 }
 
+.header-text {
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для текста */
+    padding: 15px;
+    border-radius: 8px;
+}
+
 .header-content h2 {
     margin: 0;
     font-size: 24px;
@@ -44,18 +50,6 @@ header img {
 
 main {
     padding: 20px;
-}
-
-.content-section {
-    text-align: center;
-}
-
-.content-section p {
-    margin-bottom: 15px;
-}
-
-.content-section b {
-    font-weight: bold;
 }
 
 .centered-heading {
