@@ -22,7 +22,6 @@ header img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер */
 }
 
 .header-content {
@@ -37,17 +36,15 @@ header img {
     color: white;
 }
 
-.header-content h2 {
-    margin: 0;
-    font-size: 24px;
-}
-
-main {
+.text-block {
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
+    border-radius: 10px;
+    color: white;
 }
 
 .content-section {
-    text-align: center;
+    padding: 20px;
 }
 
 .content-section p {
