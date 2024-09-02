@@ -9,22 +9,22 @@ header {
     position: relative;
     text-align: center;
     color: white;
+    overflow: hidden; /* Обрезает изображение, если оно выходит за пределы контейнера */
 }
 
 header img {
     width: 100%;
     height: auto;
-    max-height: 400px; /* Устанавливаем максимальную высоту, например 400px */
-    object-fit: cover; /* Обрезаем изображение, если оно выходит за пределы контейнера */
+    max-width: none; /* Убирает ограничение на максимальную ширину */
+    max-height: none; /* Убирает ограничение на максимальную высоту */
 }
 
-/* Это необязательно, но если нужно: */
+/* Дополнительные стили для больших экранов */
 @media screen and (min-width: 1200px) {
     header img {
-        max-height: 300px; /* Например, уменьшите высоту на больших экранах */
+        max-height: 400px; /* Пример высоты для больших экранов */
     }
 }
-
 
 .header-content {
     position: absolute;
@@ -42,8 +42,11 @@ header img {
     font-size: 24px;
 }
 
-.content-section {
+main {
     padding: 20px;
+}
+
+.content-section {
     text-align: center;
 }
 
@@ -93,4 +96,8 @@ header img {
     display: inline-block;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+.order-button:hover {
+    background-color: #45a049; /* Более тёмный зелёный для hover состояния */
 }
