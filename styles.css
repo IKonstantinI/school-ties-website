@@ -66,16 +66,16 @@ header img {
 .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 20px; /* Отступ между карточками */
+    justify-content: space-between; /* Распределение карточек по ширине */
 }
 
 .product-card {
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
-    max-width: 250px;
+    max-width: calc(25% - 20px); /* Ширина карточки для 4 карточек в ряду */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширину */
     text-align: center;
 }
 
