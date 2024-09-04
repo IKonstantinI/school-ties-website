@@ -15,8 +15,9 @@ body {
 header {
     position: relative;
     text-align: center;
-    color: #fff;
+    color: white;
     overflow: hidden;
+    padding: 20px; /* Добавляем отступы, чтобы текст не касался краев */
 }
 
 header img {
@@ -30,11 +31,28 @@ header img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6); /* Увеличенный контраст */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Легкая тень для лучшего контраста */
 }
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 767px) {
+    .header-content {
+        font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
+        padding: 10px; /* Уменьшаем отступы */
+        max-width: 90%; /* Увеличиваем максимальную ширину, чтобы текст не перекрывал изображение */
+        top: 60%; /* Перемещаем текст вниз, чтобы он не перекрывал важные части изображения */
+    }
+
+    header img {
+        height: auto; /* Убираем фиксированную высоту изображения */
+    }
+}
+
 
 .text-block {
     display: flex;
