@@ -37,11 +37,29 @@ header img {
 }
 
 .text-block {
-    background-color: rgba(0, 0, 0, 0.7); /* Более темный фон для лучшего контраста */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступ между двумя блоками */
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
 }
+
+.text-block-part {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.first-part {
+    background-color: rgba(128, 128, 128, 0.3); /* Серый прозрачный фон */
+    color: #333; /* Цвет текста для контраста */
+}
+
+.second-part {
+    background-color: #f9f9f9; /* Светлый фон */
+    color: #333; /* Цвет текста для контраста */
+}
+
 
 .content-section {
     padding: 20px;
