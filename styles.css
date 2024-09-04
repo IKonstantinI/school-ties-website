@@ -29,6 +29,7 @@ header img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
@@ -36,11 +37,15 @@ header img {
 }
 
 .text-block {
-    text-align: center; /* Центрирование текста */
-    padding: 40px 20px; /* Увеличенные отступы для текста */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
     margin-top: 20px;
-    font-size: 18px; /* Увеличенный шрифт */
-    line-height: 1.6; /* Более высокий межстрочный интервал */
+}
+
+.content-section {
+    padding: 20px;
 }
 
 .content-section p {
@@ -54,10 +59,9 @@ header img {
 .centered-heading {
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 36px; /* Увеличенный размер шрифта */
+    font-size: 32px;
     font-weight: bold;
     margin: 20px 0;
-    background: none; /* Удаление фона заголовка */
 }
 
 .products {
