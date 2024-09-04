@@ -21,13 +21,7 @@ header {
 header img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Изображение будет покрывать блок */
-    object-position: center top; /* Обрезка снизу */
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%; /* Высота блока в шапке */
-    max-height: calc(100% - 300px); /* Высота блока с учетом обрезки */
+    display: block;
 }
 
 .header-content {
