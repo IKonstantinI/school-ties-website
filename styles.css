@@ -1,20 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'SF Pro', Arial, sans-serif; /* Подключите SF Pro или используйте стандартные шрифты */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #333; /* Установите стандартный цвет текста */
 }
 
 .site-container {
-    max-width: 1300px; /* Увеличенная максимальная ширина для сайта */
-    margin: 0 auto; /* Центрирование контейнера */
-    padding: 0 20px; /* Отступы по бокам */
+    max-width: 1200px; /* Корректировка максимальной ширины */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
     position: relative;
     text-align: center;
-    color: white;
+    color: #fff;
     overflow: hidden;
 }
 
@@ -29,18 +30,16 @@ header img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); /* Увеличенный контраст */
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
-    color: white;
 }
 
 .text-block {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7); /* Более темный фон для лучшего контраста */
     padding: 20px;
     border-radius: 10px;
-    color: white;
     margin-top: 20px;
 }
 
@@ -58,8 +57,7 @@ header img {
 
 .centered-heading {
     text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 32px;
+    font-size: 28px; /* Немного уменьшите размер шрифта */
     font-weight: bold;
     margin: 20px 0;
 }
@@ -73,11 +71,12 @@ header img {
 }
 
 .product-card {
-    border: 1px solid #ccc;
+    border: 1px solid #ddd; /* Легкий бордер */
     padding: 15px;
     border-radius: 5px;
     max-width: 250px;
     text-align: center;
+    background-color: #fff; /* Белый фон для карточек продуктов */
 }
 
 .product-card img {
@@ -87,15 +86,15 @@ header img {
 }
 
 .order-button {
-    background-color: #4CAF50;
+    background-color: #007aff; /* Синий цвет для кнопок */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 10px; /* Более крупное закругление для кнопок */
     margin-top: 10px;
 }
 
 .order-button:hover {
-    background-color: #45a049;
+    background-color: #005bb5; /* Более темный оттенок синего при наведении */
 }
