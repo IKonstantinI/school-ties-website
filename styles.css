@@ -27,7 +27,7 @@ header img {
 }
 
 .header-content {
-    position: absolute; /* Снова абсолютное позиционирование */
+    position: absolute; /* Абсолютное позиционирование для широких экранов */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -37,16 +37,16 @@ header img {
     max-width: 80%;
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
 }
 
 /* Адаптивность заголовка */
 @media (max-width: 767px) {
     .header-content {
-        position: relative; /* Позиционирование изменено на относительное для мобильных устройств */
+        position: relative; /* Относительное позиционирование для мобильных устройств */
         width: calc(100% - 40px); /* Ширина равна ширине контейнера минус отступы */
+        margin: 20px auto 0; /* Отступ сверху и выравнивание по центру */
         text-align: center;
-        margin-top: 20px; /* Отступ сверху для мобильных устройств */
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -112,7 +112,7 @@ header img {
     margin: 20px 0;
 }
 
-/* Адаптивность заголовка на маленьких экранах */
+/* Адаптация заголовка на маленьких экранах */
 @media (max-width: 767px) {
     .centered-heading {
         margin-top: 20px; /* Отступ сверху для заголовка */
