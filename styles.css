@@ -47,6 +47,10 @@ header img {
         left: auto;
         margin-top: 20px; /* Добавляем отступ сверху */
         text-align: center; /* Центрирование текста на маленьком экране */
+        width: calc(100% - 40px); /* Ширина равна ширине контейнера минус отступы */
+        background-color: rgba(0, 0, 0, 0.5); /* Фон на мобильных устройствах */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для лучшего восприятия */
+        padding: 20px; /* Отступы */
     }
 }
 
@@ -110,6 +114,14 @@ header img {
     font-size: 32px;
     font-weight: bold;
     margin: 20px 0;
+}
+
+/* Адаптивность заголовка на маленьких экранах */
+@media (max-width: 767px) {
+    .centered-heading {
+        margin-top: 20px; /* Отступ сверху для заголовка */
+        font-size: 24px; /* Меньший размер шрифта на мобильных устройствах */
+    }
 }
 
 .products {
