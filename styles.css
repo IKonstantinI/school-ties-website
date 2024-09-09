@@ -1,19 +1,34 @@
-/* Основные стили для широких экранов */
+/* Основные стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Контейнер сайта */
+.site-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для хедера */
 header {
     position: relative;
     text-align: center;
     color: white;
     overflow: hidden;
-    height: 100vh; /* Полная высота экрана для шапки */
+    padding: 20px;
 }
 
 header img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Обрезка изображения с сохранением пропорций */
+    height: auto;
     display: block;
 }
 
+/* Контент заголовка */
 .header-content {
     position: absolute;
     top: 50%;
@@ -24,43 +39,118 @@ header img {
     border-radius: 10px;
     max-width: 80%;
     color: white;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Стили для экранов шириной до 767px */
+/* Стили для текстовых блоков */
+.text-block-first {
+    background-color: rgba(128, 128, 128, 0.5); /* Полупрозрачный серый */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+}
+
+.text-block-second {
+    background-color: rgba(255, 255, 255, 0.9); /* Светлый блок */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+/* Стили для текста в контенте */
+.content-section p {
+    margin-bottom: 15px;
+}
+
+.content-section b {
+    font-weight: bold;
+}
+
+/* Центрированный заголовок коллекции */
+.centered-heading {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Стили для карточек продуктов */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Кнопка заказа */
+.order-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #45a049;
+}
+
+/* Медиа-запрос для малых экранов */
 @media (max-width: 767px) {
-    header {
-        height: auto; /* Высота изображения адаптируется */
-        display: flex;
+    .header-content {
+        position: static; /* Заголовок больше не абсолютный */
+        transform: none;
+        margin-top: 10px;
+        max-width: 100%; /* Заголовок занимает всю ширину */
+        background-color: rgba(255, 255, 255, 0.8); /* Светлый фон */
+        color: black; /* Черный цвет текста для контраста */
+        padding: 15px;
+    }
+
+    header img {
+        height: auto;
+        width: 100%; /* Изображение на всю ширину экрана */
+        object-fit: cover; /* Масштабирование изображения */
+    }
+
+    .text-block-first, .text-block-second {
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .centered-heading {
+        font-size: 28px;
+        margin: 15px 0;
+    }
+
+    .products {
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
 
-    header img {
-        height: auto;
-        width: 100%;
-        max-width: 100vh; /* Ограничиваем ширину до высоты экрана, делая изображение квадратным */
-    }
-
-    .header-content {
-        position: static; /* Переносим заголовок ниже изображения */
-        transform: none; /* Убираем трансформацию */
-        margin-top: 20px; /* Добавляем отступ сверху */
-        background-color: rgba(0, 0, 0, 0.4); /* Легкий полупрозрачный фон для контраста */
-    }
-}
-
-/* Стили для экранов шириной до 500px (для небольших экранов) */
-@media (max-width: 500px) {
-    header img {
-        width: 100%;
-        height: auto;
-        max-height: 100vw; /* Делаем изображение квадратным на маленьких экранах */
-        object-fit: cover; /* Обрезка изображения по бокам */
-    }
-
-    .header-content {
-        margin-top: 10px; /* Уменьшенные отступы */
-        padding: 10px; /* Уменьшаем отступы внутри блока заголовка */
-        font-size: 14px; /* Уменьшенный размер шрифта для мобильных */
+    .product-card {
+        max-width: 100%;
     }
 }
