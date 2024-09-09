@@ -27,30 +27,23 @@ header img {
 }
 
 .header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    position: relative; /* Убираем абсолютное позиционирование для мобильных устройств */
+    margin: 0 auto; /* Центрируем по горизонтали */
     padding: 20px;
     border-radius: 10px;
-    max-width: 80%;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 100%; /* Ширина по умолчанию */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для лучшего восприятия */
 }
 
 /* Адаптивность заголовка */
 @media (max-width: 767px) {
     .header-content {
-        position: relative;
-        transform: translate(0, 0); /* Убираем смещение для мобильных устройств */
-        top: auto;
-        left: auto;
-        margin-top: 20px; /* Добавляем отступ сверху */
-        text-align: center; /* Центрирование текста на маленьком экране */
-        width: calc(100% - 40px); /* Ширина равна ширине контейнера минус отступы */
+        max-width: 100%; /* Ширина блока на мобильных устройствах */
+        width: calc(100% - 40px); /* Ширина блока с учетом отступов */
+        text-align: center; /* Центрируем текст */
         background-color: rgba(0, 0, 0, 0.5); /* Фон на мобильных устройствах */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для лучшего восприятия */
-        padding: 20px; /* Отступы */
+        margin: 20px auto; /* Отступ сверху и снизу */
     }
 }
 
