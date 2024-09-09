@@ -46,6 +46,7 @@ header img {
         top: auto;
         left: auto;
         margin-top: 20px; /* Добавляем отступ сверху */
+        text-align: center; /* Центрирование текста на маленьком экране */
     }
 }
 
