@@ -27,23 +27,30 @@ header img {
 }
 
 .header-content {
-    position: relative; /* Убираем абсолютное позиционирование для мобильных устройств */
-    margin: 0 auto; /* Центрируем по горизонтали */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    max-width: 100%; /* Ширина по умолчанию */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для лучшего восприятия */
+    max-width: 80%;
+    color: white;
 }
 
 /* Адаптивность заголовка */
 @media (max-width: 767px) {
     .header-content {
-        max-width: 100%; /* Ширина блока на мобильных устройствах */
-        width: calc(100% - 40px); /* Ширина блока с учетом отступов */
-        text-align: center; /* Центрируем текст */
-        background-color: rgba(0, 0, 0, 0.5); /* Фон на мобильных устройствах */
-        margin: 20px auto; /* Отступ сверху и снизу */
+        position: relative;
+        transform: translate(0, 0); /* Убираем смещение для мобильных устройств */
+        top: auto;
+        left: auto;
+        margin-top: 20px; /* Добавляем отступ сверху */
+        text-align: center; /* Центрирование текста на маленьком экране */
+        width: 100%; /* Занимает всю ширину контейнера */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для лучшего восприятия */
+        padding: 20px; /* Отступы */
+        box-sizing: border-box; /* Учитываем отступы в ширине */
     }
 }
 
@@ -109,11 +116,16 @@ header img {
     margin: 20px 0;
 }
 
-/* Адаптивность заголовка на маленьких экранах */
+/* Адаптация заголовка на маленьких экранах */
 @media (max-width: 767px) {
     .centered-heading {
         margin-top: 20px; /* Отступ сверху для заголовка */
         font-size: 24px; /* Меньший размер шрифта на мобильных устройствах */
+        padding: 10px; /* Отступы вокруг заголовка */
+        background-color: rgba(255, 255, 255, 0.9); /* Светлый фон для контраста */
+        border: 2px solid rgba(192, 192, 192, 0.5); /* Рамка */
+        border-radius: 10px; /* Закругленные углы */
+        display: inline-block; /* Выравнивание по ширине текстового блока */
     }
 }
 
