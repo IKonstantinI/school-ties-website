@@ -27,30 +27,21 @@ header img {
 }
 
 .header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative; /* Изменено на относительное позиционирование для центрирования */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-    max-width: 80%;
+    max-width: 100%;
     color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Центрирование блока */
 }
 
 /* Адаптивность заголовка */
 @media (max-width: 767px) {
     .header-content {
-        position: relative;
-        transform: translate(0, 0); /* Убираем смещение для мобильных устройств */
-        top: auto;
-        left: auto;
-        margin-top: 20px; /* Добавляем отступ сверху */
+        width: calc(100% - 40px); /* Ширина равна ширине контейнера минус отступы */
         text-align: center; /* Центрирование текста на маленьком экране */
-        width: 100%; /* Занимает всю ширину контейнера */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для лучшего восприятия */
-        padding: 20px; /* Отступы */
-        box-sizing: border-box; /* Учитываем отступы в ширине */
     }
 }
 
@@ -60,7 +51,7 @@ header img {
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
-    max-width: 800px;
+    max-width: 100%;
     margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -79,7 +70,7 @@ header img {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 15px;
-    max-width: 800px;
+    max-width: 100%;
     margin: 20px auto;
     color: #333;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -92,7 +83,7 @@ header img {
     padding: 20px;
     border-radius: 10px;
     margin-top: 10px;
-    max-width: 800px;
+    max-width: 100%;
     margin: 20px auto;
     color: #000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -103,7 +94,7 @@ header img {
     .text-block,
     .text-block-first,
     .text-block-second {
-        max-width: 95%;
+        max-width: calc(100% - 40px); /* Ширина текстовых блоков уменьшена на отступы */
         padding: 15px;
     }
 }
@@ -116,16 +107,11 @@ header img {
     margin: 20px 0;
 }
 
-/* Адаптация заголовка на маленьких экранах */
+/* Адаптивность заголовка на маленьких экранах */
 @media (max-width: 767px) {
     .centered-heading {
         margin-top: 20px; /* Отступ сверху для заголовка */
         font-size: 24px; /* Меньший размер шрифта на мобильных устройствах */
-        padding: 10px; /* Отступы вокруг заголовка */
-        background-color: rgba(255, 255, 255, 0.9); /* Светлый фон для контраста */
-        border: 2px solid rgba(192, 192, 192, 0.5); /* Рамка */
-        border-radius: 10px; /* Закругленные углы */
-        display: inline-block; /* Выравнивание по ширине текстового блока */
     }
 }
 
