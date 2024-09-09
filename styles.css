@@ -1,4 +1,4 @@
-/* Основные стили для всего сайта */
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,20 +6,18 @@ body {
     box-sizing: border-box;
 }
 
-/* Контейнер сайта */
 .site-container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Стили для хедера */
+/* Шапка сайта */
 header {
     position: relative;
     text-align: center;
     color: white;
     overflow: hidden;
-    padding: 20px;
 }
 
 header img {
@@ -28,7 +26,6 @@ header img {
     display: block;
 }
 
-/* Контент заголовка */
 .header-content {
     position: absolute;
     top: 50%;
@@ -39,46 +36,81 @@ header img {
     border-radius: 10px;
     max-width: 80%;
     color: white;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Стили для текстовых блоков */
-.text-block-first {
-    background-color: rgba(128, 128, 128, 0.5); /* Полупрозрачный серый */
+/* Адаптивность заголовка */
+@media (max-width: 767px) {
+    .header-content {
+        position: relative;
+        transform: translate(0, 0); /* Убираем смещение для мобильных устройств */
+        top: auto;
+        left: auto;
+        margin-top: 20px; /* Добавляем отступ сверху */
+    }
+}
+
+/* Оформление текстовых блоков */
+.text-block {
+    border: 2px solid rgba(128, 128, 128, 0.3);
     padding: 20px;
     border-radius: 10px;
-    margin-top: 20px;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 1.6;
+    color: #333;
 }
 
-.text-block-second {
-    background-color: rgba(255, 255, 255, 0.9); /* Светлый блок */
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-    color: black;
-}
-
-/* Стили для текста в контенте */
-.content-section p {
+.text-block p {
     margin-bottom: 15px;
 }
 
-.content-section b {
-    font-weight: bold;
+/* Первый текстовый блок (серый полупрозрачный) */
+.text-block-first {
+    border: 2px solid rgba(192, 192, 192, 0.5);
+    background-color: rgba(128, 128, 128, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Центрированный заголовок коллекции */
+/* Второй текстовый блок (светлый) */
+.text-block-second {
+    border: 2px solid rgba(192, 192, 192, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Адаптация текстовых блоков для мобильных устройств */
+@media (max-width: 767px) {
+    .text-block,
+    .text-block-first,
+    .text-block-second {
+        max-width: 95%;
+        padding: 15px;
+    }
+}
+
+/* Оформление заголовков и коллекции */
 .centered-heading {
     text-align: center;
-    font-family: Arial, sans-serif;
     font-size: 32px;
     font-weight: bold;
     margin: 20px 0;
 }
 
-/* Стили для карточек продуктов */
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -101,7 +133,7 @@ header img {
     border-radius: 5px;
 }
 
-/* Кнопка заказа */
+/* Кнопки заказа */
 .order-button {
     background-color: #4CAF50;
     color: white;
@@ -110,47 +142,16 @@ header img {
     display: inline-block;
     border-radius: 5px;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
 
 .order-button:hover {
     background-color: #45a049;
 }
 
-/* Медиа-запрос для малых экранов */
+/* Адаптация карточек товаров на мобильных устройствах */
 @media (max-width: 767px) {
-    .header-content {
-        position: static; /* Заголовок больше не абсолютный */
-        transform: none;
-        margin-top: 10px;
-        max-width: 100%; /* Заголовок занимает всю ширину */
-        background-color: rgba(255, 255, 255, 0.8); /* Светлый фон */
-        color: black; /* Черный цвет текста для контраста */
-        padding: 15px;
-    }
-
-    header img {
-        height: auto;
-        width: 100%; /* Изображение на всю ширину экрана */
-        object-fit: cover; /* Масштабирование изображения */
-    }
-
-    .text-block-first, .text-block-second {
-        margin-top: 10px;
-        padding: 15px;
-    }
-
-    .centered-heading {
-        font-size: 28px;
-        margin: 15px 0;
-    }
-
-    .products {
-        flex-direction: column;
-        gap: 15px;
-    }
-
     .product-card {
         max-width: 100%;
+        margin-bottom: 20px;
     }
 }
