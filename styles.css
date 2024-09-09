@@ -1,31 +1,20 @@
-body {
-    font-family: 'SF Pro', Arial, sans-serif; /* Подключите SF Pro или используйте стандартные шрифты */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #333; /* Установите стандартный цвет текста */
-}
-
-.site-container {
-    max-width: 1200px; /* Корректировка максимальной ширины */
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+/* Основные стили для шапки */
 header {
     position: relative;
     text-align: center;
     color: white;
-    overflow: hidden;
-    padding: 20px; /* Добавляем отступы, чтобы текст не касался краев */
+    overflow: hidden; /* Скрываем части изображения за пределами контейнера */
+    height: 100vh; /* Фиксируем высоту изображения на весь экран */
 }
 
 header img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Обрезка изображения с сохранением пропорций */
     display: block;
 }
 
+/* Стиль для заголовка на полном экране */
 .header-content {
     position: absolute;
     top: 50%;
@@ -36,101 +25,43 @@ header img {
     border-radius: 10px;
     max-width: 80%;
     color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Легкая тень для лучшего контраста */
 }
 
-/* Медиа-запросы для мобильных устройств */
+/* Медиа-запросы для экранов с шириной до 767px */
 @media (max-width: 767px) {
-    .header-content {
-        font-size: 12px; /* Уменьшаем размер шрифта для мобильных устройств */
-        padding: 6px; /* Уменьшаем отступы */
-        max-width: 90%; /* Увеличиваем максимальную ширину, чтобы текст не перекрывал изображение */
-        top: 60%; /* Перемещаем текст вниз, чтобы он не перекрывал важные части изображения */
+    header {
+        height: auto; /* Фиксируем высоту изображения */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     header img {
-        height: auto; /* Убираем фиксированную высоту изображения */
+        height: auto;
+        width: 100%;
+        max-width: 100vh; /* Ограничиваем ширину изображения, чтобы оно стало квадратным */
+    }
+
+    .header-content {
+        position: static; /* Убираем абсолютное позиционирование */
+        transform: none; /* Сбрасываем трансформации */
+        margin-top: 20px; /* Отступ сверху для заголовка */
+        background-color: rgba(0, 0, 0, 0.4);
     }
 }
 
+/* Медиа-запросы для изображений, когда оно становится квадратным */
+@media (max-width: 500px) {
+    header img {
+        width: 100%; /* Ширина на весь экран */
+        height: auto; /* Автоматическая высота для создания квадратного изображения */
+        max-height: 100vw; /* Ограничиваем максимальную высоту, чтобы сделать изображение квадратным */
+        object-fit: cover; /* Обрезаем изображение с краев */
+    }
 
-.text-block {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Отступ между двумя блоками */
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.text-block-part {
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.first-part {
-    background-color: rgba(128, 128, 128, 0.3); /* Серый прозрачный фон */
-    color: #333; /* Цвет текста для контраста */
-}
-
-.second-part {
-    background-color: #f9f9f9; /* Светлый фон */
-    color: #333; /* Цвет текста для контраста */
-}
-
-
-.content-section {
-    padding: 20px;
-}
-
-.content-section p {
-    margin-bottom: 15px;
-}
-
-.content-section b {
-    font-weight: bold;
-}
-
-.centered-heading {
-    text-align: center;
-    font-size: 28px; /* Немного уменьшите размер шрифта */
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.product-card {
-    border: 1px solid #ddd; /* Легкий бордер */
-    padding: 15px;
-    border-radius: 5px;
-    max-width: 250px;
-    text-align: center;
-    background-color: #fff; /* Белый фон для карточек продуктов */
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.order-button {
-    background-color: #007aff; /* Синий цвет для кнопок */
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px; /* Более крупное закругление для кнопок */
-    margin-top: 10px;
-}
-
-.order-button:hover {
-    background-color: #005bb5; /* Более темный оттенок синего при наведении */
+    .header-content {
+        margin-top: 10px; /* Уменьшаем отступы для заголовка */
+        padding: 10px; /* Уменьшаем отступы в блоке заголовка */
+        font-size: 14px; /* Уменьшаем размер шрифта для лучшей адаптации */
+    }
 }
