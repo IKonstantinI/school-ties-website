@@ -73,37 +73,23 @@ header img {
 
 /* Оформление текстовых блоков */
 .text-block {
-    text-align: center;
+    border: 2px solid rgba(192, 192, 192, 0.5); /* Совпадает с новым стилем */
     padding: 20px;
-    background-color: #f9f9f9; /* Светлый фон, как у order-section */
-    border-top: 2px solid rgba(192, 192, 192, 0.5); /* Верхняя граница для выделения */
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Белый фон для четкого контраста */
     max-width: 100%;
     margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
-    line-height: 1.6;
+    line-height: 1.6; /* Немного уменьшен для улучшения читаемости */
     color: #333;
 }
 
-.text-block h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    background-color: #4CAF50; /* Зеленый фон для заголовка */
-    color: white; /* Белый цвет текста */
-    padding: 15px;
-    border-radius: 5px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
+.text-block-first {
+    background-color: rgba(245, 245, 245, 0.9); /* Фон для контраста */
 }
 
-.text-block h2:hover {
-    background-color: #45a049;
-}
-
-.text-block p {
-    font-size: 18px;
-    margin-bottom: 15px;
+.text-block-second {
+    background-color: rgba(255, 255, 255, 0.9); /* Белый фон для четкого контраста */
 }
 
 .text-block a {
@@ -116,20 +102,43 @@ header img {
     color: #45a049; /* Темно-зеленый цвет при наведении */
 }
 
-.text-block-first {
-    background-color: rgba(245, 245, 245, 0.9); /* Фон для контраста */
+/* Стиль заголовка в блоке */
+.header-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    background-color: #4CAF50; /* Зеленый фон для заголовка */
+    color: white; /* Белый цвет текста */
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.text-block-second {
-    background-color: rgba(255, 255, 255, 0.9); /* Белый фон для четкого контраста */
+.header-content h2:hover {
+    background-color: #45a049;
 }
 
 @media (max-width: 767px) {
-    .text-block,
-    .text-block-first,
-    .text-block-second {
+    .text-block {
         max-width: calc(100% - 40px);
         padding: 15px;
+        border: none; /* Убираем границу для объединенного блока */
+        background-color: rgba(255, 255, 255, 0.9); /* Белый фон для объединенного блока */
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
+    .header-content h2 {
+        font-size: 24px; /* Меньше размер шрифта для маленьких экранов */
+        margin-bottom: 15px; /* Увеличиваем отступ снизу для лучшего восприятия */
+    }
+
+    .text-block p {
+        font-size: 18px;
+        margin-bottom: 15px;
     }
 }
 
@@ -312,7 +321,7 @@ footer a:hover {
     </header>
     
     <main>
-        <div class="text-block text-block-first">
+        <div class="text-block">
             <p>Мы предлагаем качественные галстуки, которые идеально подойдут для школьной формы и не только.</p>
         </div>
         <div class="text-block text-block-second">
