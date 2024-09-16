@@ -1,6 +1,5 @@
-/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,11 +26,11 @@ header img {
 }
 
 .header-content {
-    position: absolute; /* Абсолютное позиционирование для широких экранов */
+    position: absolute; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
@@ -39,12 +38,11 @@ header img {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Адаптивность заголовка */
 @media (max-width: 767px) {
     .header-content {
-        position: relative; /* Относительное позиционирование для мобильных устройств */
-        width: calc(100% - 40px); /* Ширина равна ширине контейнера минус отступы */
-        margin: 20px auto 0; /* Отступ сверху и выравнивание по центру */
+        position: relative;
+        width: calc(100% - 40px);
+        margin: 20px auto 0;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.5);
     }
@@ -55,12 +53,11 @@ header img {
     border: 2px solid rgba(128, 128, 128, 0.3);
     padding: 20px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     max-width: 100%;
     margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #333;
 }
 
@@ -68,38 +65,21 @@ header img {
     margin-bottom: 15px;
 }
 
-/* Первый текстовый блок (серый полупрозрачный) */
 .text-block-first {
     border: 2px solid rgba(192, 192, 192, 0.5);
-    background-color: rgba(128, 128, 128, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    max-width: 100%;
-    margin: 20px auto;
-    color: #333;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    background-color: rgba(245, 245, 245, 0.9); /* Изменение фона для улучшения контрастности */
 }
 
-/* Второй текстовый блок (светлый) */
 .text-block-second {
     border: 2px solid rgba(192, 192, 192, 0.5);
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-    max-width: 100%;
-    margin: 20px auto;
-    color: #000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Адаптация текстовых блоков для мобильных устройств */
 @media (max-width: 767px) {
     .text-block,
     .text-block-first,
     .text-block-second {
-        max-width: calc(100% - 40px); /* Ширина текстовых блоков уменьшена на отступы */
+        max-width: calc(100% - 40px);
         padding: 15px;
     }
 }
@@ -107,16 +87,15 @@ header img {
 /* Оформление заголовков и коллекции */
 .centered-heading {
     text-align: center;
-    font-size: 32px;
+    font-size: 36px; /* Увеличен размер заголовков для лучшей читабельности */
     font-weight: bold;
     margin: 20px 0;
 }
 
-/* Адаптация заголовка на маленьких экранах */
 @media (max-width: 767px) {
     .centered-heading {
-        margin-top: 20px; /* Отступ сверху для заголовка */
-        font-size: 24px; /* Меньший размер шрифта на мобильных устройствах */
+        margin-top: 20px;
+        font-size: 28px;
     }
 }
 
@@ -130,10 +109,12 @@ header img {
 
 .product-card {
     border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
     max-width: 250px;
     text-align: center;
+    background-color: #fff; /* Добавлен фон для четкого контраста */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тени для глубины */
 }
 
 .product-card img {
@@ -142,7 +123,6 @@ header img {
     border-radius: 5px;
 }
 
-/* Кнопки заказа */
 .order-button {
     background-color: #4CAF50;
     color: white;
@@ -151,13 +131,14 @@ header img {
     display: inline-block;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Анимация для кнопки */
 }
 
 .order-button:hover {
     background-color: #45a049;
+    transform: translateY(-3px); /* Добавлен эффект при наведении */
 }
 
-/* Адаптация карточек товаров на мобильных устройствах */
 @media (max-width: 767px) {
     .product-card {
         max-width: 100%;
