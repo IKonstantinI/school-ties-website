@@ -143,67 +143,82 @@ header img {
 }
 
 
-/* Оформление заголовков и коллекции */
-.centered-heading {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-@media (max-width: 767px) {
-    .centered-heading {
-        margin-top: 20px;
-        font-size: 28px;
-    }
-}
-
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.product-card {
-    border: 1px solid #ccc;
+/* Оформление текстовых блоков */
+.text-block {
+    border: 2px solid rgba(192, 192, 192, 0.5); /* Совпадает с новым стилем */
     padding: 20px;
     border-radius: 10px;
-    max-width: 250px;
-    text-align: center;
-    background-color: #fff; /* Добавлен фон для четкого контраста */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тени для глубины */
-}
-
-.product-card img {
+    background-color: rgba(255, 255, 255, 0.9); /* Белый фон для четкого контраста */
     max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
+    line-height: 1.6; /* Немного уменьшен для улучшения читаемости */
+    color: #333;
 }
 
-.order-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+.text-block-first {
+    background-color: rgba(245, 245, 245, 0.9); /* Фон для контраста */
+}
+
+.text-block-second {
+    background-color: rgba(255, 255, 255, 0.9); /* Белый фон для четкого контраста */
+}
+
+.text-block a {
+    color: #4CAF50; /* Зеленый цвет ссылок */
     text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Анимация для кнопки */
+    font-weight: bold;
 }
 
-.order-button:hover {
+.text-block a:hover {
+    color: #45a049; /* Темно-зеленый цвет при наведении */
+}
+
+/* Стиль заголовка в блоке */
+.header-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    background-color: #4CAF50; /* Зеленый фон для заголовка */
+    color: white; /* Белый цвет текста */
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header-content h2:hover {
     background-color: #45a049;
-    transform: translateY(-3px); /* Добавлен эффект при наведении */
 }
 
 @media (max-width: 767px) {
-    .product-card {
-        max-width: 100%;
-        margin-bottom: 20px;
+    .text-block {
+        max-width: calc(100% - 40px);
+        padding: 15px;
+        border: none; /* Убираем границу для объединенного блока */
+        background-color: rgba(255, 255, 255, 0.9); /* Белый фон для объединенного блока */
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
+    .header-content h2 {
+        font-size: 24px; /* Меньше размер шрифта для маленьких экранов */
+        margin-bottom: 15px; /* Увеличиваем отступ снизу для лучшего восприятия */
+        background-color: transparent; /* Убираем фон у заголовка */
+        color: #4CAF50; /* Зеленый цвет текста */
+        padding: 0; /* Убираем паддинг */
+        cursor: default; /* Убираем курсор pointer */
+        text-decoration: none; /* Убираем текст-декорирование */
+    }
+
+    .text-block p {
+        font-size: 18px;
+        margin-bottom: 15px;
     }
 }
+
 
 /* Коллаж из трех фото */
 .photo-collage {
