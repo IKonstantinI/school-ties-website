@@ -168,6 +168,72 @@ header img {
         margin-bottom: 20px;
     }
 }
+
+/* Коллаж из трех фото */
+.photo-collage {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.photo-collage img {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    .photo-collage {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-collage img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* О галстуках Bertoldi */
+.about-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 2px solid #ccc;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #45a049;
+}
 </style>
 
 <div class="site-container">
@@ -192,7 +258,7 @@ header img {
         <h1 class="centered-heading">Коллекция Bertoldi</h1>
         
         <section class="products">
-            <!-- Product 1 -->
+            <!-- Product cards here -->
             <div class="product-card">
                 <img src="https://i.postimg.cc/DztRXbH0/temp-Imagex-Dglf-T.avif" alt="Галстук-регат 32 см (арт. 169047205)">
                 <h2>Галстук-регат 32 см</h2>
@@ -273,7 +339,26 @@ header img {
                     <a href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Дуэт%20набор%20–%20галстук-регат%2032%20см%20%2B%20галстук-бантик%2012%20см%20(арт.%20174884779)%20%20%20%20тираж%20____%0A%0AДоставка%20до%20пункта%20СДЭК%20в%20____________________%20по%20адресу%20______________.%0A%0AИмя%20получателя%20____________________%2C%20тел.%20%2B7_________%0A%0AТел.%20%2F%20WhatsApp%20%2B9958921213" class="order-button">Заказать</a>
                 </div>
         </section>
+
+        <!-- Коллаж с изображениями -->
+        <section class="photo-collage">
+            <img src="https://via.placeholder.com/400x300" alt="Placeholder image 1">
+            <img src="https://via.placeholder.com/400x300" alt="Placeholder image 2">
+            <img src="https://via.placeholder.com/400x300" alt="Placeholder image 3">
+        </section>
+
+        <!-- Блок с текстом "О галстуках Bertoldi" -->
+        <section class="about-section">
+            <h2>О галстуках Bertoldi</h2>
+            <p>Галстуки Bertoldi — это сочетание традиций и современного дизайна. Мы предлагаем широкий ассортимент школьных галстуков, которые отличаются качеством материалов и вниманием к деталям. Каждый галстук разработан для удобного ношения и соответствует требованиям школьной формы. Наша продукция пользуется популярностью среди родителей и школ, благодаря стильному внешнему виду и долговечности.</p>
+        </section>
+
+        <!-- Футер -->
+        <footer>
+            <a href="https://vk.com" target="_blank">Наша группа в ВКонтакте</a>
+        </footer>
     </main>
 </div>
+
 </body>
 </html>
