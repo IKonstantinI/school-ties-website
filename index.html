@@ -7,234 +7,169 @@
     <meta name="description" content="Купить качественные и стильные галстуки Bertoldi для школы. Выгодные предложения и бесплатная доставка.">
     <meta name="keywords" content="галстуки, Bertoldi, школьные галстуки, покупка галстуков">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        a {
+            color: #007aff; /* Синий цвет в стиле Apple */
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #005bb5; /* Более темный оттенок при наведении */
+        }
+
+        .site-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .header-content {
+            margin-top: -40px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .header-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .text-block {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .centered-heading {
+            text-align: center;
+            font-size: 36px;
+            margin: 40px 0;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .order-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007aff;
+            color: white;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Коллаж */
+        .photo-collage {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .photo-collage img {
+            width: 32%;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .photo-collage {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .photo-collage img {
+                width: 100%;
+            }
+        }
+
+        /* О галстуках Bertoldi */
+        .about-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .about-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        footer a {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-
-<style>
-/* Общие стили */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.site-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Шапка сайта */
-header {
-    position: relative;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-}
-
-header img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.header-content {
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 80%;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 767px) {
-    header {
-        text-align: center;
-    }
-
-    .header-content {
-        position: relative; /* Относительное позиционирование */
-        top: auto;
-        left: auto;
-        transform: none; /* Отменить transform */
-        background-color: rgba(0, 0, 0, 0.5);
-        width: calc(100% - 40px); /* Максимальная ширина блока минус отступы */
-        margin: 20px auto 0; /* Разместить блок под картинкой */
-        padding: 15px;
-        text-align: center;
-    }
-}
-
-/* Оформление текстовых блоков */
-.text-block {
-    border: 2px solid rgba(128, 128, 128, 0.3);
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    max-width: 100%;
-    margin: 20px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    line-height: 1.8;
-    color: #333;
-}
-
-.text-block p {
-    margin-bottom: 15px;
-}
-
-.text-block-first {
-    border: 2px solid rgba(192, 192, 192, 0.5);
-    background-color: rgba(245, 245, 245, 0.9); /* Изменение фона для улучшения контрастности */
-}
-
-.text-block-second {
-    border: 2px solid rgba(192, 192, 192, 0.5);
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-@media (max-width: 767px) {
-    .text-block,
-    .text-block-first,
-    .text-block-second {
-        max-width: calc(100% - 40px);
-        padding: 15px;
-    }
-}
-
-/* Оформление заголовков и коллекции */
-.centered-heading {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-@media (max-width: 767px) {
-    .centered-heading {
-        margin-top: 20px;
-        font-size: 28px;
-    }
-}
-
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.product-card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 250px;
-    text-align: center;
-    background-color: #fff; /* Добавлен фон для четкого контраста */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тени для глубины */
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.order-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Анимация для кнопки */
-}
-
-.order-button:hover {
-    background-color: #45a049;
-    transform: translateY(-3px); /* Добавлен эффект при наведении */
-}
-
-@media (max-width: 767px) {
-    .product-card {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Коллаж из трех фото */
-.photo-collage {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-.photo-collage img {
-    width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 767px) {
-    .photo-collage {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .photo-collage img {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-}
-
-/* О галстуках Bertoldi */
-.about-section {
-    text-align: center;
-    padding: 20px;
-}
-
-.about-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Футер */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-top: 2px solid #ccc;
-    margin-top: 40px;
-}
-
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #45a049;
-}
-</style>
 
 <div class="site-container">
     <header>
@@ -245,99 +180,32 @@ footer a:hover {
     </header>
     
     <main>
-        <div class="text-block text-block-first">
-            <p>Мы предлагаем качественные галстуки, которые идеально подойдут для школьной формы и не только.</p>
+        <!-- Блоки с текстом -->
+        <div class="text-block">
+            <p>Мы предлагаем качественные галстуки, которые идеально подойдут для школьной формы и не только. Каждый наш продукт отличается вниманием к деталям и высокими стандартами изготовления.</p>
         </div>
-        <div class="text-block text-block-second">
-            <p>Здесь вы можете заказать галстуки Bertoldi (Бертольди) для детей вашего класса или школы <b>мелким оптом</b> по привлекательным ценам. Цена включает стоимость доставки до пункта СДЭК в вашем городе.</p>
-            <p>Если вам нужно 1-2 единицы, то их удобнее заказать в нашем магазине на Wildberries (по поиску «галстуки Bertoldi») или перейдите по ссылке в <a href="https://clck.ru/3Csh8F">магазин на Wildberries</a></p>
-            <p>Для оптового заказа пишите нам на <a href="https://wa.me/9958921213">WhatsApp</a>.</p>
-            <p>Получайте выгодное предложение и бесплатную доставку до пункта СДЭК!</p>
+        
+        <div class="text-block">
+            <p>Здесь вы можете заказать галстуки Bertoldi для детей вашего класса или школы мелким оптом по привлекательным ценам. Цена включает доставку до пункта СДЭК в вашем городе.</p>
+            <p>Если вам нужно 1-2 единицы, их можно заказать в нашем магазине на Wildberries <a href="https://clck.ru/3Csh8F">здесь</a>. Для оптовых заказов свяжитесь с нами через <a href="https://wa.me/9958921213">WhatsApp</a>.</p>
         </div>
 
+        <!-- Коллекция продуктов -->
         <h1 class="centered-heading">Коллекция Bertoldi</h1>
         
         <section class="products">
-            <!-- Product cards here -->
             <div class="product-card">
-                <img src="https://i.postimg.cc/DztRXbH0/temp-Imagex-Dglf-T.avif" alt="Галстук-регат 32 см (арт. 169047205)">
+                <img src="https://i.postimg.cc/DztRXbH0/temp-Imagex-Dglf-T.avif" alt="Галстук-регат 32 см">
                 <h2>Галстук-регат 32 см</h2>
-                <h3>арт. 169047205</h3>
+                <p>арт. 169047205</p>
                 <ul>
                     <li>10 шт. - 390 руб.</li>
                     <li>20 шт. - 380 руб.</li>
-                    <li>30 шт. - 375 руб.</li>
                     <li>100 шт. - 360 руб.</li>
                 </ul>
-                <a href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук-регат%2032%20см%20(арт.%20169047205)%20%20%20%20тираж%20____%0A%0AДоставка%20до%20пункта%20СДЭК%20в%20____________________%20по%20адресу%20______________.%0A%0AИмя%20получателя%20____________________%2C%20тел.%20%2B7_________%0A%0AТел.%20%2F%20WhatsApp%20%2B9958921213" class="order-button">Заказать</a>
+                <a href="https://wa.me/9958921213" class="order-button">Заказать</a>
             </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="https://i.postimg.cc/JnZvczCq/temp-Image5-TZ5n-Q.avif" alt="Галстук-бантик (арт. 227728772)">
-                <h2>Галстук-бантик</h2>
-                <h3>арт. 227728772</h3>
-                <ul>
-                    <li>10 шт. - 390 руб.</li>
-                    <li>20 шт. - 380 руб.</li>
-                    <li>30 шт. - 375 руб.</li>
-                    <li>100 шт. - 360 руб.</li>
-                </ul>
-                <a href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук-бантик%20(арт.%20227728772)%20%20%20%20тираж%20____%0A%0AДоставка%20до%20пункта%20СДЭК%20в%20____________________%20по%20адресу%20______________.%0A%0AИмя%20получателя%20____________________%2C%20тел.%20%2B7_________%0A%0AТел.%20%2F%20WhatsApp%20%2B9958921213" class="order-button">Заказать</a>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="https://i.postimg.cc/nrx5dfHt/temp-Image6txl-CU.avif" alt="Галстук-регат 28 см (арт. 185085101)">
-                <h2>Галстук-регат 28 см</h2>
-                <h3>арт. 185085101</h3>
-                <ul>
-                    <li>10 шт. - 390 руб.</li>
-                    <li>20 шт. - 380 руб.</li>
-                    <li>30 шт. - 375 руб.</li>
-                    <li>100 шт. - 360 руб.</li>
-                </ul>
-                <a href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук-регат%2028%20см%20(арт.%20185085101)%20%20%20%20тираж%20____%0A%0AДоставка%20до%20пункта%20СДЭК%20в%20____________________%20по%20адресу%20______________.%0A%0AИмя%20получателя%20____________________%2C%20тел.%20%2B7_________%0A%0AТел.%20%2F%20WhatsApp%20%2B9958921213" class="order-button">Заказать</a>
-            </div>
-            <!-- Product 4 -->
-                <div class="product-card">
-                    <img src="https://i.postimg.cc/595DXy39/temp-Image72xs-Oj.avif" alt="Галстук-бантик мини (арт. 255651369)">
-                    <h2>Галстук-бантик мини</h2>
-                    <h3>арт. 255651369</h3>
-                    <ul>
-                        <li>10 шт. - 390 руб.</li>
-                        <li>20 шт. - 380 руб.</li>
-                        <li>30 шт. - 375 руб.</li>
-                        <li>100 шт. - 360 руб.</li>
-                    </ul>
-                    <a href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук-бантик%20мини%20(арт.%20255651369)%20%20%20%20тираж%20____%0A%0AДоставка%20до%20пункта%20СДЭК%20в%20____________________%20по%20адресу%20______________.%0A%0AИмя%20получателя%20____________________%2C%20тел.%20%2B7_________%0A%0AТел.%20%2F%20WhatsApp%20%2B9958921213" class="order-button">Заказать</a>
-                </div>
-                <!-- Product 5 -->
-                <div class="product-card">
-                    <img src="https://i.postimg.cc/D0cNHpZ4/temp-Imageg62o-N2.avif" alt="Галстук 2 в 1 (бантик + брошь) (арт. 247853517)">
-                    <h2>Галстук 2 в 1 (бантик + брошь)</h2>
-                    <h3>арт. 247853517</h3>
-                    <ul>
-                        <li>10 шт. - 390 руб.</li>
-                        <li>20 шт. - 380 руб.</li>
-                        <li>30 шт. - 375 руб.</li>
-                        <li>100 шт. - 360 руб.</li>
-                    </ul>
-                    <a href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Галстук%202%20в%201%20(бантик%20+%20брошь)%20(арт.%20247853517)%20%20%20%20тираж%20____%0A%0AДоставка%20до%20пункта%20СДЭК%20в%20____________________%20по%20адресу%20______________.%0A%0AИмя%20получателя%20____________________%2C%20тел.%20%2B7_________%0A%0AТел.%20%2F%20WhatsApp%20%2B9958921213" class="order-button">Заказать</a>
-                </div>
-                <!-- Product 6 -->
-                <div class="product-card">
-                    <img src="https://i.postimg.cc/SKXwRGZH/temp-Imageom2-IXo.avif" alt="Дуэт набор – галстук-регат 32 см + галстук-бантик 12 см (арт. 174884779)">
-                    <h2>Дуэт набор – галстук-регат 32 см + галстук-бантик 12 см</h2>
-                    <h3>арт. 174884779</h3>
-                    <ul>
-                        <li>10 шт. - 390 руб.</li>
-                        <li>20 шт. - 380 руб.</li>
-                        <li>30 шт. - 375 руб.</li>
-                        <li>100 шт. - 360 руб.</li>
-                    </ul>
-                    <a href="https://wa.me/9958921213?text=Добрый%20день!%20Хотим%20заказать%20галстуки%20Bertoldi:%0A%0AМодель%20Дуэт%20набор%20–%20галстук-регат%2032%20см%20%2B%20галстук-бантик%2012%20см%20(арт.%20174884779)%20%20%20%20тираж%20____%0A%0AДоставка%20до%20пункта%20СДЭК%20в%20____________________%20по%20адресу%20______________.%0A%0AИмя%20получателя%20____________________%2C%20тел.%20%2B7_________%0A%0AТел.%20%2F%20WhatsApp%20%2B9958921213" class="order-button">Заказать</a>
-                </div>
+            <!-- Добавьте другие карточки продуктов здесь -->
         </section>
 
         <!-- Коллаж с изображениями -->
