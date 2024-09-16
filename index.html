@@ -11,7 +11,164 @@
 </head>
 <body>
 
+<style>
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.site-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка сайта */
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-content {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    header {
+        text-align: center;
+    }
+
+    .header-content {
+        position: relative; /* Относительное позиционирование */
+        top: auto;
+        left: auto;
+        transform: none; /* Отменить transform */
+        background-color: rgba(0, 0, 0, 0.5);
+        width: calc(100% - 40px); /* Максимальная ширина блока минус отступы */
+        margin: 20px auto 0; /* Разместить блок под картинкой */
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* Оформление текстовых блоков */
+.text-block {
+    border: 2px solid rgba(128, 128, 128, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    color: #333;
+}
+
+.text-block p {
+    margin-bottom: 15px;
+}
+
+.text-block-first {
+    border: 2px solid rgba(192, 192, 192, 0.5);
+    background-color: rgba(245, 245, 245, 0.9); /* Изменение фона для улучшения контрастности */
+}
+
+.text-block-second {
+    border: 2px solid rgba(192, 192, 192, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 767px) {
+    .text-block,
+    .text-block-first,
+    .text-block-second {
+        max-width: calc(100% - 40px);
+        padding: 15px;
+    }
+}
+
+/* Оформление заголовков и коллекции */
+.centered-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+@media (max-width: 767px) {
+    .centered-heading {
+        margin-top: 20px;
+        font-size: 28px;
+    }
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 250px;
+    text-align: center;
+    background-color: #fff; /* Добавлен фон для четкого контраста */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тени для глубины */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.order-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Анимация для кнопки */
+}
+
+.order-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px); /* Добавлен эффект при наведении */
+}
+
+@media (max-width: 767px) {
+    .product-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+</style>
 
 <div class="site-container">
     <header>
