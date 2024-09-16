@@ -72,29 +72,46 @@ header img {
 }
 
 /* Оформление текстовых блоков */
+/* Оформление текстовых блоков */
 .text-block {
-    border: 2px solid rgba(192, 192, 192, 0.5); /* Совпадает с новым стилем */
+    text-align: center;
     padding: 20px;
+    background-color: #f9f9f9; /* Светлый фон, как у order-section */
+    border-top: 2px solid rgba(192, 192, 192, 0.5); /* Верхняя граница для выделения */
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9); /* Белый фон для четкого контраста */
     max-width: 100%;
     margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
-    line-height: 1.6; /* Немного уменьшен для улучшения читаемости */
+    line-height: 1.6;
     color: #333;
 }
 
+.text-block h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    background-color: #4CAF50; /* Зеленый фон для заголовка */
+    color: white; /* Белый цвет текста */
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text-block h2:hover {
+    background-color: #45a049;
+}
+
 .text-block p {
+    font-size: 18px;
     margin-bottom: 15px;
 }
 
 .text-block-first {
-    border: 2px solid rgba(192, 192, 192, 0.5); /* Совпадает с новым стилем */
-    background-color: rgba(245, 245, 245, 0.9); /* Фон для контраста, как в новом блоке */
+    background-color: rgba(245, 245, 245, 0.9); /* Фон для контраста */
 }
 
 .text-block-second {
-    border: 2px solid rgba(192, 192, 192, 0.5); /* Совпадает с новым стилем */
     background-color: rgba(255, 255, 255, 0.9); /* Белый фон для четкого контраста */
 }
 
@@ -106,6 +123,7 @@ header img {
         padding: 15px;
     }
 }
+
 /* Оформление заголовков и коллекции */
 .centered-heading {
     text-align: center;
