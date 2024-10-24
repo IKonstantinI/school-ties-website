@@ -411,7 +411,10 @@
         }
         @media (max-width: 768px) {
             .header-content h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem; /* Уменьшаем размер заголовка в шапке на мобильных устройствах */
+            }
+            .header-content p {
+                font-size: 1rem;
             }
             .section-title {
                 font-size: 2rem;
@@ -426,13 +429,25 @@
             header {
                 padding-top: 60px; /* Установите значение в соответствии с высотой навигационной панели */
             }
+            /* Улучшаем отображение навигационной панели */
+            nav ul {
+                top: 50px;
+            }
+            nav .container {
+                flex-wrap: wrap;
+            }
+            nav .logo {
+                flex: 1 1 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
         }
         @media (max-width: 576px) {
             .header-content h1 {
-                font-size: 2rem;
+                font-size: 1.8rem; /* Еще уменьшаем размер заголовка для очень маленьких экранов */
             }
             .header-content p {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             .product-info h2 {
                 font-size: 1.2rem;
@@ -448,6 +463,10 @@
             }
             .section-title {
                 font-size: 1.8rem;
+            }
+            /* Уменьшаем отступы в навигационной панели */
+            nav ul li {
+                margin-left: 0;
             }
         }
     </style>
