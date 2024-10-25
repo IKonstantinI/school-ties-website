@@ -32,12 +32,13 @@
             color: inherit;
             text-decoration: none;
         }
+
         /* Навигация */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: #4CAF50;
             z-index: 999;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -50,7 +51,7 @@
         nav .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #4CAF50;
+            color: #fff;
         }
         nav ul {
             display: flex;
@@ -61,29 +62,31 @@
         }
         nav ul li a {
             font-size: 1rem;
-            color: #333;
+            color: #fff;
             transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #4CAF50;
+            color: #f1f1f1;
         }
-        /* Мобильное меню */
         .menu-toggle {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: #fff;
         }
+
+        /* Мобильное меню */
         @media (max-width: 768px) {
             nav .container {
-                padding: 10px 20px;
+                padding: 5px 20px; /* Уменьшили отступы */
             }
             nav ul {
                 display: none;
                 flex-direction: column;
                 width: 100%;
-                background-color: rgba(255, 255, 255, 0.95);
+                background-color: #4CAF50;
                 position: absolute;
-                top: 60px;
+                top: 100%;
                 left: 0;
                 padding: 10px 0;
             }
@@ -91,13 +94,17 @@
                 display: flex;
             }
             nav ul li {
-                margin: 10px 0;
+                margin: 5px 0; /* Уменьшили отступы между пунктами меню */
                 text-align: center;
             }
             .menu-toggle {
                 display: block;
             }
+            nav .logo {
+                font-size: 1.2rem;
+            }
         }
+
         /* Шапка сайта */
         header {
             background: url('https://i.postimg.cc/GmnjM6Nq/temp-Imagezm-Kyu-C.avif') no-repeat center/cover;
@@ -108,6 +115,7 @@
             color: #fff;
             position: relative;
             text-align: center;
+            padding-top: 80px;
         }
         header::before {
             content: '';
@@ -124,6 +132,7 @@
             z-index: 2;
             max-width: 800px;
             padding: 0 20px;
+            margin-bottom: 80px; /* Добавили отступ снизу */
         }
         .header-content h1 {
             font-size: 3.5rem;
@@ -141,25 +150,27 @@
             display: inline-block;
             margin-top: 30px;
             padding: 15px 30px;
-            background-color: #4CAF50;
-            color: #fff;
+            background-color: #fff; /* Исправили цвет фона */
+            color: #4CAF50;        /* Исправили цвет текста */
             border-radius: 50px;
             font-size: 1.2rem;
             transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
         }
         .header-content a.button:hover {
-            background-color: #45a049;
+            background-color: #f1f1f1;
             transform: translateY(-5px);
         }
-        /* Выделение ссылок в шапке без подчеркивания */
+        /* Выделение ссылок в тексте */
         .header-content a {
             color: #4CAF50;
-            text-decoration: none;
+            text-decoration: underline;
             font-weight: bold;
         }
         .header-content a:hover {
             color: #45a049;
         }
+
         /* Анимация стрелки вниз */
         .scroll-down {
             position: absolute;
@@ -169,21 +180,23 @@
             font-size: 2rem;
             color: #fff;
             animation: bounce 2s infinite;
-            z-index: 2;
+            z-index: 1; /* Изменили z-index */
         }
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {transform: translate(-50%, 0);}
             40% {transform: translate(-50%, -15px);}
             60% {transform: translate(-50%, -10px);}
         }
+
         /* Основной контент */
         main {
             padding: 80px 0;
         }
         /* Добавляем отступ для секций */
         section {
-            scroll-margin-top: 80px; /* Установите значение в соответствии с высотой вашего навигационного бара */
+            scroll-margin-top: 80px;
         }
+
         /* Заголовок раздела */
         .section-title {
             text-align: center;
@@ -202,6 +215,7 @@
             bottom: -15px;
             transform: translateX(-50%);
         }
+
         /* Продукты */
         .products {
             display: grid;
@@ -264,11 +278,13 @@
             border-radius: 50px;
             font-weight: bold;
             transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
         }
         .product-info a:hover {
             background-color: #45a049;
             transform: translateY(-5px);
         }
+
         /* Секция заказа */
         .order-section {
             background-color: #4CAF50;
@@ -318,11 +334,13 @@
             transition: background-color 0.3s, transform 0.3s;
             position: relative;
             z-index: 1;
+            text-decoration: none;
         }
         .order-section a:hover {
             background-color: #f1f1f1;
             transform: translateY(-5px);
         }
+
         /* О галстуках Bertoldi */
         .about-section {
             padding: 80px 20px;
@@ -352,6 +370,7 @@
             margin: 0 auto;
             line-height: 1.8;
         }
+
         /* Фотогалерея */
         .gallery {
             display: grid;
@@ -369,6 +388,7 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
+
         /* Футер */
         footer {
             background-color: #333;
@@ -397,76 +417,157 @@
             color: #4CAF50;
             transform: translateY(-5px);
         }
-        /* Адаптивность */
-        @media (max-width: 992px) {
-            nav ul li {
-                margin-left: 20px;
-            }
-            .header-content h1 {
-                font-size: 3rem;
-            }
-            .header-content p {
-                font-size: 1.1rem;
-            }
-        }
+
+        /* Мобильная версия */
         @media (max-width: 768px) {
+            /* Навигация */
+            nav .container {
+                padding: 5px 20px;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #4CAF50;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 10px 0;
+            }
+            nav ul.showing {
+                display: flex;
+            }
+            nav ul li {
+                margin: 5px 0;
+                text-align: center;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            nav .logo {
+                font-size: 1.2rem;
+            }
+
+            /* Шапка сайта */
+            header {
+                height: auto;
+                padding: 100px 0 50px 0;
+            }
             .header-content h1 {
-                font-size: 2.2rem; /* Уменьшаем размер заголовка в шапке на мобильных устройствах */
+                font-size: 2rem;
             }
             .header-content p {
                 font-size: 1rem;
             }
-            .section-title {
-                font-size: 2rem;
+            .header-content a.button {
+                padding: 12px 20px;
+                font-size: 1rem;
             }
-            .about-section h2 {
-                font-size: 2rem;
+
+            /* Продукты */
+            .products {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
-            .order-section h2 {
-                font-size: 2rem;
-            }
-            /* Добавляем верхний отступ для шапки на мобильных устройствах */
-            header {
-                padding-top: 60px; /* Установите значение в соответствии с высотой навигационной панели */
-            }
-            /* Улучшаем отображение навигационной панели */
-            nav ul {
-                top: 50px;
-            }
-            nav .container {
-                flex-wrap: wrap;
-            }
-            nav .logo {
-                flex: 1 1 100%;
-                text-align: center;
-                margin-bottom: 10px;
-            }
-        }
-        @media (max-width: 576px) {
-            .header-content h1 {
-                font-size: 1.8rem; /* Еще уменьшаем размер заголовка для очень маленьких экранов */
-            }
-            .header-content p {
-                font-size: 0.9rem;
+            .product-card {
+                flex-direction: column;
             }
             .product-info h2 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
+            }
+            .product-info h3 {
+                font-size: 1rem;
             }
             .product-info p {
                 font-size: 0.9rem;
             }
+
+            /* Секция заказа */
+            .order-section {
+                margin: 60px 0;
+                padding: 40px 20px;
+            }
             .order-section h2 {
+                font-size: 2rem;
+            }
+            .order-section p {
+                font-size: 1rem;
+            }
+            .order-section a {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+
+            /* О нас */
+            .about-section {
+                padding: 60px 20px;
+            }
+            .about-section h2 {
+                font-size: 2rem;
+            }
+            .about-section p {
+                font-size: 1rem;
+            }
+
+            /* Галерея */
+            .gallery {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+
+            /* Футер */
+            footer {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Дополнительные стили для очень маленьких экранов */
+        @media (max-width: 480px) {
+            /* Навигация */
+            nav .container {
+                    padding: 5px 20px;
+            }
+            nav .logo {
+                    font-size: 1.2rem;
+                    flex-grow: 1;
+            }
+            .menu-toggle {
+                    display: flex;
+                    align-items: center;
+            }
+            .menu-toggle i {
+                    font-size: 1.5rem; /* Размер иконки */
+            }
+
+            /* Шапка сайта */
+            .header-content h1 {
                 font-size: 1.8rem;
             }
+            .header-content p {
+                font-size: 0.9rem;
+            }
+
+            /* Кнопки */
+            .header-content a.button,
+            .order-section a {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+
+            /* Текст */
+            .product-info h2 {
+                font-size: 1.2rem;
+            }
+            .product-info p {
+                font-size: 0.8rem;
+            }
+            .order-section h2,
             .about-section h2 {
                 font-size: 1.8rem;
             }
-            .section-title {
-                font-size: 1.8rem;
-            }
-            /* Уменьшаем отступы в навигационной панели */
-            nav ul li {
-                margin-left: 0;
+            .order-section p,
+            .about-section p {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -610,7 +711,7 @@
                     </div>
                 </div>
                 </div>
-
+            </div>
             </div>
         </section>
         <!-- Секция заказа -->
@@ -655,9 +756,11 @@
         const menuToggle = document.querySelector('.menu-toggle');
         const navUl = document.querySelector('nav ul');
 
-        menuToggle.addEventListener('click', () => {
-            navUl.classList.toggle('showing');
-        });
+        if (menuToggle && navUl) {
+            menuToggle.addEventListener('click', () => {
+                navUl.classList.toggle('showing');
+            });
+        }
     </script>
 </body>
 </html>
