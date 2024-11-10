@@ -63,7 +63,7 @@ nav ul li a:hover {
 /* Мобильное меню */
 @media (max-width: 768px) {
     nav .container {
-        padding: 5px 20px; /* Уменьшили отступы */
+        padding: 5px 20px;
     }
     nav ul {
         display: none;
@@ -79,7 +79,7 @@ nav ul li a:hover {
         display: flex;
     }
     nav ul li {
-        margin: 5px 0; /* Уменьшили отступы между пунктами меню */
+        margin: 5px 0;
         text-align: center;
     }
     .menu-toggle {
@@ -117,7 +117,7 @@ header::before {
     z-index: 2;
     max-width: 800px;
     padding: 0 20px;
-    margin-bottom: 80px; /* Добавили отступ снизу */
+    margin-bottom: 80px;
 }
 .header-content h1 {
     font-size: 3.5rem;
@@ -135,8 +135,8 @@ header::before {
     display: inline-block;
     margin-top: 30px;
     padding: 15px 30px;
-    background-color: #fff; /* Исправили цвет фона */
-    color: #4CAF50;        /* Исправили цвет текста */
+    background-color: #fff;
+    color: #4CAF50;
     border-radius: 50px;
     font-size: 1.2rem;
     transition: background-color 0.3s, transform 0.3s;
@@ -165,7 +165,7 @@ header::before {
     font-size: 2rem;
     color: #fff;
     animation: bounce 2s infinite;
-    z-index: 1; /* Изменили z-index */
+    z-index: 1;
 }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translate(-50%, 0);}
@@ -394,164 +394,4 @@ footer .social-icons {
 }
 footer .social-icons a {
     margin: 0 10px;
-    font-size: 1.5rem;
-    color: #fff;
-    transition: color 0.3s, transform 0.3s;
-}
-footer .social-icons a:hover {
-    color: #4CAF50;
-    transform: translateY(-5px);
-}
-
-/* Мобильная версия */
-@media (max-width: 768px) {
-    /* Навигация */
-    nav .container {
-        padding: 5px 20px;
-    }
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #4CAF50;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 10px 0;
-    }
-    nav ul.showing {
-        display: flex;
-    }
-    nav ul li {
-        margin: 5px 0;
-        text-align: center;
-    }
-    .menu-toggle {
-        display: block;
-    }
-    nav .logo {
-        font-size: 1.2rem;
-    }
-
-    /* Шапка сайта */
-    header {
-        height: auto;
-        padding: 100px 0 50px 0;
-    }
-    .header-content h1 {
-        font-size: 2rem;
-    }
-    .header-content p {
-        font-size: 1rem;
-    }
-    .header-content a.button {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-
-    /* Продукты */
-    .products {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .product-card {
-        flex-direction: column;
-    }
-    .product-info h2 {
-        font-size: 1.3rem;
-    }
-    .product-info h3 {
-        font-size: 1rem;
-    }
-    .product-info p {
-        font-size: 0.9rem;
-    }
-
-    /* Секция заказа */
-    .order-section {
-        margin: 60px 0;
-        padding: 40px 20px;
-    }
-    .order-section h2 {
-        font-size: 2rem;
-    }
-    .order-section p {
-        font-size: 1rem;
-    }
-    .order-section a {
-        font-size: 1rem;
-        padding: 12px 20px;
-    }
-
-    /* О нас */
-    .about-section {
-        padding: 60px 20px;
-    }
-    .about-section h2 {
-        font-size: 2rem;
-    }
-    .about-section p {
-        font-size: 1rem;
-    }
-
-    /* Галерея */
-    .gallery {
-        grid-template-columns: 1fr;
-        padding: 40px 20px;
-    }
-
-    /* Футер */
-    footer {
-        padding: 30px 20px;
-    }
-}
-
-/* Дополнительные стили для очень маленьких экранов */
-@media (max-width: 480px) {
-    /* Навигация */
-    nav .container {
-        padding: 5px 20px;
-    }
-    nav .logo {
-        font-size: 1.2rem;
-        flex-grow: 1;
-    }
-    .menu-toggle {
-        display: flex;
-        align-items: center;
-    }
-    .menu-toggle i {
-        font-size: 1.5rem; /* Размер иконки */
-    }
-
-    /* Шапка сайта */
-    .header-content h1 {
-        font-size: 1.8rem;
-    }
-    .header-content p {
-        font-size: 0.9rem;
-    }
-
-    /* Кнопки */
-    .header-content a.button,
-    .order-section a {
-        font-size: 0.9rem;
-        padding: 10px 15px;
-    }
-
-    /* Текст */
-    .product-info h2 {
-        font-size: 1.2rem;
-    }
-    .product-info p {
-        font-size: 0.8rem;
-    }
-    .order-section h2,
-    .about-section h2 {
-        font-size: 1.8rem;
-    }
-    .order-section p,
-    .about-section p {
-        font-size: 0.9rem;
-    }
-}
+    font-size: 1.5
